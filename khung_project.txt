@@ -1,0 +1,104 @@
+car_price_prediction/
+│
+├── data/
+│   ├── raw/                    # Dữ liệu thô sau khi scrape
+│   │   ├── bonbanh_data.csv
+│   │   └── oto_data.csv
+│   ├── processed/              # Dữ liệu đã được xử lý
+│   │   └── processed_data.csv
+│   └── final/                  # Dữ liệu cuối cùng cho mô hình
+│       ├── train_data.csv
+│       └── test_data.csv
+│
+├── notebooks/
+│   ├── 01_data_collection.ipynb      # Thu thập dữ liệu
+│   ├── 02_data_preprocessing.ipynb   # Tiền xử lý dữ liệu
+│   ├── 03_exploratory_analysis.ipynb # Phân tích khám phá dữ liệu
+│   └── 04_model_development.ipynb    # Xây dựng và đánh giá mô hình
+│
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── scraper.py          # Mã scraping dữ liệu
+│   │   └── preprocessing.py    # Mã xử lý dữ liệu
+│   │
+│   ├── features/
+│   │   ├── __init__.py
+│   │   └── feature_engineering.py  # Tạo và chọn features
+│   │
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── train_model.py      # Huấn luyện mô hình
+│   │   ├── predict_model.py    # Dự đoán sử dụng mô hình
+│   │   └── evaluate_model.py   # Đánh giá mô hình
+│   │
+│   └── visualization/
+│       ├── __init__.py
+│       └── visualize.py        # Mã tạo biểu đồ và trực quan hóa
+│
+├── models/                    # Lưu trữ mô hình đã huấn luyện
+│   ├── linear_regression.pkl
+│   ├── random_forest.pkl
+│   └── xgboost_model.pkl
+│
+├── app/
+│   ├── __init__.py
+│   ├── api.py                 # API cho dự đoán
+│   ├── templates/             # Templates HTML cho web UI
+│   │   ├── index.html
+│   │   └── result.html
+│   ├── static/                # CSS, JS và hình ảnh
+│   │   ├── css/
+│   │   └── js/
+│   └── main.py                # Ứng dụng chính
+│
+├── tests/                     # Kiểm thử
+│   ├── __init__.py
+│   ├── test_data.py
+│   ├── test_features.py
+│   └── test_models.py
+│
+├── requirements.txt           # Phụ thuộc thư viện
+├── setup.py                   # Script cài đặt
+├── .gitignore                 # Các file và thư mục bỏ qua
+└── README.md                  # Tài liệu hướng dẫn
+
+
+
+```
+car_price_prediction/
+├── app/
+│   ├── __init__.py
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── main.js
+│   ├── templates/
+│   │   ├── index.html
+│   │   └── results.html
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── crawler.py
+│   │   ├── preprocessor.py
+│   │   └── database.py
+│   ├── config.py
+│   ├── models.py
+│   └── routes.py
+├── data/
+│   ├── raw/
+│   └── processed/
+├── migrations/
+├── logs/
+├── requirements.txt
+├── config.py
+├── run.py
+└── db_init.py
+```
+
+chạy: python db__init.py
+
+chạy cái web crawl: python run.py
+nhớ cài đủ thư viện
+ vào link http://localhost:5000/

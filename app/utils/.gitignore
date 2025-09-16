@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cython debug symbols
+cython_debug/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# pip cache
+pip-log.txt
+pip-delete-this-directory.txt
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytest
+.cache/
+
+# pyright
+pyrightconfig.json
+
+# PyInstaller
+dist/
+build/
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/

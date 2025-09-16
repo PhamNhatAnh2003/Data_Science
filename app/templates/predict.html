@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự Đoán Giá Xe - Car Price Prediction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container py-4">
+        <header class="pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4">Dự Đoán Giá Xe - Car Price Prediction</span>
+                <a href="{{ url_for('main.index') }}" class="btn btn-outline-primary ms-auto">Quản Lý Dữ Liệu</a>
+            </div>
+        </header>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show"
+            role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Nhập Thông Tin Xe</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="predictionForm" action="{{ url_for('main.predict') }}" method="post">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="brand" class="form-label">Hãng Xe</label>
+                                    <select class="form-select" id="brand" name="brand" required>
+                                        <option value="">Chọn hãng xe</option>
+                                        {% for brand in brands %}
+                                        <option value="{{ brand.id }}">{{ brand.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="model" class="form-label">Dòng Xe</label>
+                                    <select class="form-select" id="model" name="model" required disabled>
+                                        <option value="">Chọn dòng xe</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="year" class="form-label">Năm Sản Xuất</label>
+                                    <select class="form-select" id="year" name="year" required>
+                                        <option value="">Chọn năm</option>
+                                        {% for year in years %}
+                                        <option value="{{ year.id }}">{{ year.year }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="mileage" class="form-label">Số Km Đã Đi</label>
+                                    <input type="number" class="form-control" id="mileage" name="mileage"
+                                        placeholder="Ví dụ: 15000" required min="0" max="500000">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="seats" class="form-label">Số Chỗ Ngồi</label>
+                                    <select class="form-select" id="seats" name="seats" required>
+                                        <option value="">Chọn số chỗ</option>
+                                        {% for seat in seats %}
+                                        <option value="{{ seat.id }}">{{ seat.seat }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <label for="fuel_type" class="form-label">Nhiên Liệu</label>
+                                    <select class="form-select" id="fuel_type" name="fuel_type" required>
+                                        <option value="">Chọn nhiên liệu</option>
+                                        {% for fuel in fuel_types %}
+                                        <option value="{{ fuel.id }}">{{ fuel.type }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="transmission" class="form-label">Hộp Số</label>
+                                    <select class="form-select" id="transmission" name="transmission" required>
+                                        <option value="">Chọn hộp số</option>
+                                        {% for transmission in transmissions %}
+                                        <option value="{{ transmission.id }}">{{ transmission.transmission }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="car_type" class="form-label">Kiểu Dáng</label>
+                                    <select class="form-select" id="car_type" name="car_type" required>
+                                        <option value="">Chọn kiểu dáng</option>
+                                        <!-- Các kiểu dáng sẽ được cập nhật theo model -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="origin" class="form-label">Xuất Xứ</label>
+                                    <select class="form-select" id="origin" name="origin" required>
+                                        <option value="">Chọn xuất xứ</option>
+                                        {% for origin in origins %}
+                                        <option value="{{ origin.id }}">{{ origin.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Dự Đoán Giá</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kết quả dự đoán sẽ hiển thị ở đây khi có dữ liệu -->
+        {% if prediction %}
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">Kết Quả Dự Đoán</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Thông tin xe:</h6>
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item">Hãng xe: <strong>{{ brand_name }}</strong></li>
+                                    <li class="list-group-item">Dòng xe: <strong>{{ model_name }}</strong></li>
+                                    <li class="list-group-item">Năm sản xuất: <strong>{{ year_value }}</strong></li>
+                                    <li class="list-group-item">Số Km đã đi: <strong>{{ mileage }}</strong></li>
+                                    <li class="list-group-item">Nhiên liệu: <strong>{{ fuel_type_name }}</strong></li>
+                                    <li class="list-group-item">Hộp số: <strong>{{ transmission_name }}</strong></li>
+                                    <li class="list-group-item">Xuất xứ: <strong>{{ origin }}</strong></li>
+                                    <li class="list-group-item">Kiểu dáng: <strong>{{ car_type_name }}</strong></li>
+                                    <li class="list-group-item">Số chỗ ngồi: <strong>{{ seats_value }}</strong></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6">
+                                <h6>Giá dự đoán:</h6>
+                                <div class="price-container bg-light p-4 mb-3 rounded">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Linear Regression:</span>
+                                        <span class="fs-5 text-primary">{{ "{:,.0f}".format(prediction.lr) }} VNĐ</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Random Forest:</span>
+                                        <span class="fs-5 text-success">{{ "{:,.0f}".format(prediction.rf) }} VNĐ</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>XGBoost:</span>
+                                        <span class="fs-5 text-danger">{{ "{:,.0f}".format(prediction.xgb) }} VNĐ</span>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fw-bold">Giá trung bình:</span>
+                                        <span class="fs-4 fw-bold">{{ "{:,.0f}".format(prediction_avg) }} VNĐ</span>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info">
+                                    <small>
+                                        <i class="fas fa-info-circle"></i> Kết quả dự đoán được tính từ 3 mô hình khác
+                                        nhau.
+                                        Giá trị trung bình là tham khảo tốt nhất cho việc định giá.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow">
+                    <div class="card-header bg-light">
+                        <h5 class="card-title mb-0">Thống Kê Dự Đoán Gần Đây</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if recent_predictions %}
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Hãng Xe</th>
+                                        <th>Dòng Xe</th>
+                                        <th>Năm SX</th>
+                                        <th>Giá Dự Đoán (Trung bình)</th>
+                                        <th>Thời gian</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for pred in recent_predictions %}
+                                    <tr>
+                                        <td>{{ pred.brand }}</td>
+                                        <td>{{ pred.model }}</td>
+                                        <td>{{ pred.year }}</td>
+                                        <td>{{ "{:,.0f}".format((pred.predicted_price_lr + pred.predicted_price_rf +
+                                            pred.predicted_price_xgb) / 3) }} VNĐ</td>
+                                        <td>{{ pred.prediction_time.strftime('%d/%m/%Y %H:%M') }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        {% else %}
+                        <p class="text-center">Chưa có dữ liệu dự đoán nào.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+</body>
+
+</html>

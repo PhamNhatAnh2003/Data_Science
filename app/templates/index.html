@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction - Data Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container py-4">
+
+        <!-- Thêm nút xem database vào header -->
+        <header class="pb-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center text-dark text-decoration-none">
+                <span class="fs-4">Car Price Prediction - Data Manager</span>
+                <a href="{{ url_for('main.database_info') }}" class="btn btn-outline-info ms-auto">View Database</a>
+            </div>
+        </header>
+        <div class="row mb-4">
+            <div class="col-md-12 text-center">
+                <a href="{{ url_for('main.predict') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calculator"></i> Chuyển Đến Trang Dự Đoán Giá Xe
+                </a>
+            </div>
+        </div>
+
+        <!-- Sửa đổi thông tin hiển thị số liệu -->
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Database Statistics</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Brands in database
+                        <span class="badge bg-primary rounded-pill">{{ brand_count }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Models in database
+                        <span class="badge bg-primary rounded-pill">{{ model_count }}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show"
+            role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Database Statistics</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Cars in database
+                                <span class="badge bg-primary rounded-pill">{{ car_count }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Brands
+                                <span class="badge bg-primary rounded-pill">{{ brand_count }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Models
+                                <span class="badge bg-primary rounded-pill">{{ model_count }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Activity Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Latest Crawl:</h6>
+                                {% if latest_crawl %}
+                                <p>Status: <span
+                                        class="badge bg-{{ 'success' if latest_crawl.status == 'completed' else 'warning' if latest_crawl.status == 'running' else 'danger' }}">{{
+                                        latest_crawl.status }}</span></p>
+                                <p>Start time: {{ latest_crawl.start_time.strftime('%Y-%m-%d %H:%M') }}</p>
+                                <p>Records: {{ latest_crawl.records_count }}</p>
+                                {% else %}
+                                <p>No crawling activity recorded yet.</p>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Latest Processing:</h6>
+                                {% if latest_processing %}
+                                <p>Status: <span
+                                        class="badge bg-{{ 'success' if latest_processing.status == 'completed' else 'warning' if latest_processing.status == 'running' else 'danger' }}">{{
+                                        latest_processing.status }}</span></p>
+                                <p>Start time: {{ latest_processing.start_time.strftime('%Y-%m-%d %H:%M') }}</p>
+                                <p>Records: {{ latest_processing.records_count }}</p>
+                                {% else %}
+                                <p>No processing activity recorded yet.</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Step 1: Crawl Data</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Start a new crawling job from Chợ Tốt to collect car data.</p>
+
+                        <form action="{{ url_for('main.crawl') }}" method="post">
+                            <div class="mb-3">
+                                <label for="start_page" class="form-label">Start Page</label>
+                                <input type="number" class="form-control" id="start_page" name="start_page" value="1"
+                                    min="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="end_page" class="form-label">End Page</label>
+                                <input type="number" class="form-control" id="end_page" name="end_page" value="5"
+                                    min="1" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Start Crawling</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Hint: Each page contains about 20 cars. Crawling takes time.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">Step 2: Preprocess Data</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Clean and preprocess the most recently crawled data file.</p>
+
+                        <form action="{{ url_for('main.preprocess') }}" method="post">
+                            <button type="submit" class="btn btn-success">Start Preprocessing</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">This will clean the data and prepare it for the database.</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="card-title mb-0">Step 3: Import to Database</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Import the preprocessed data into the database.</p>
+
+                        <form action="{{ url_for('main.import_to_db') }}" method="post">
+                            <button type="submit" class="btn btn-warning">Import to Database</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">This will store clean data in structured tables.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="card-title mb-0">Step 4: Đào tạo lại mô hình</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Đào tạo lại các mô hình dự đoán giá xe với dữ liệu mới nhất.</p>
+
+                        <form action="{{ url_for('main.train_models') }}" method="post">
+                            <button type="submit" class="btn btn-info">Đào tạo mô hình</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Quá trình này có thể mất vài phút. Vui lòng kiểm tra logs để biết
+                            trạng thái.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <h3>Recent Activity Logs</h3>
+                <div class="mb-3">
+                    <a href="{{ url_for('main.logs') }}" class="btn btn-outline-secondary">View All Logs</a>
+                </div>
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="crawl-tab" data-bs-toggle="tab"
+                            data-bs-target="#crawl-tab-pane" type="button" role="tab" aria-controls="crawl-tab-pane"
+                            aria-selected="true">Crawl Logs</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="process-tab" data-bs-toggle="tab"
+                            data-bs-target="#process-tab-pane" type="button" role="tab" aria-controls="process-tab-pane"
+                            aria-selected="false">Processing Logs</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="crawl-tab-pane" role="tabpanel"
+                        aria-labelledby="crawl-tab" tabindex="0">
+                        {% if latest_crawl %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Source</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Status</th>
+                                        <th>Records</th>
+                                        <th>Actions</th> <!-- Thêm cột Actions mới -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-log-id="{{ latest_crawl.id }}">
+                                        <td>{{ latest_crawl.id }}</td>
+                                        <td>{{ latest_crawl.source }}</td>
+                                        <td>{{ latest_crawl.start_time.strftime('%Y-%m-%d %H:%M') }}</td>
+                                        <td>{{ latest_crawl.end_time.strftime('%Y-%m-%d %H:%M') if latest_crawl.end_time
+                                            else '-' }}</td>
+                                        <td><span
+                                                class="badge bg-{{ 'success' if latest_crawl.status == 'completed' else 'warning' if latest_crawl.status.startswith('running') else 'danger' }} crawler-status">{{
+                                                latest_crawl.status }}</span></td>
+                                        <td>{{ latest_crawl.records_count }}</td>
+                                        <td class="crawler-actions">
+                                            {% if latest_crawl.status.startswith('running') %}
+                                            <button class="btn btn-sm btn-warning"
+                                                onclick="resetCrawler( latest_crawl.id )">
+                                                Reset
+                                            </button>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-outline-warning" onclick="checkStuckCrawlers()">
+                                Reset All Stuck Crawlers
+                            </button>
+                        </div>
+                        {% else %}
+                        <p class="mt-3">No crawl logs found.</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="tab-pane fade" id="process-tab-pane" role="tabpanel" aria-labelledby="process-tab"
+                        tabindex="0">
+                        {% if latest_processing %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Input File</th>
+                                        <th>Output File</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Status</th>
+                                        <th>Records</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ latest_processing.id }}</td>
+                                        <td>{{ latest_processing.input_file }}</td>
+                                        <td>{{ latest_processing.output_file if latest_processing.output_file else '-'
+                                            }}</td>
+                                        <td>{{ latest_processing.start_time.strftime('%Y-%m-%d %H:%M') }}</td>
+                                        <td>{{ latest_processing.end_time.strftime('%Y-%m-%d %H:%M') if
+                                            latest_processing.end_time else '-' }}</td>
+                                        <td><span
+                                                class="badge bg-{{ 'success' if latest_processing.status == 'completed' else 'warning' if latest_processing.status == 'running' else 'danger' }}">{{
+                                                latest_processing.status }}</span></td>
+                                        <td>{{ latest_processing.records_count }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        {% else %}
+                        <p class="mt-3">No processing logs found.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

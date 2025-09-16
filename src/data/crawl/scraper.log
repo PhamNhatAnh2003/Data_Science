@@ -1,0 +1,13 @@
+2025-04-12 16:42:31,756 - INFO - Scraping listings from page: https://bonbanh.com/oto/page,1
+2025-04-12 16:42:32,061 - INFO - Found 20 listings on the page
+2025-04-12 16:42:32,061 - INFO - Scraping car 1/5: https://bonbanh.com/xe-vinfast-limo-green-at-2025-6154652 (ID: 6154652)
+2025-04-12 16:42:32,118 - INFO - Successfully scraped data for car 6154652
+2025-04-12 16:42:33,133 - INFO - Scraping car 2/5: https://bonbanh.com/xe-honda-city-1.5-at-2015-6166034 (ID: 6166034)
+2025-04-12 16:42:33,244 - INFO - Successfully scraped data for car 6166034
+2025-04-12 16:42:34,251 - INFO - Scraping car 3/5: https://bonbanh.com/xe-vinfast-vf8-plus-2024-6074743 (ID: 6074743)
+2025-04-12 16:42:34,326 - INFO - Successfully scraped data for car 6074743
+2025-04-12 16:42:35,344 - INFO - Scraping car 4/5: https://bonbanh.com/xe-mercedes_benz-maybach-s450-4matic-2018-6116477 (ID: 6116477)
+2025-04-12 16:42:35,399 - INFO - Successfully scraped data for car 6116477
+2025-04-12 16:42:36,412 - INFO - Scraping car 5/5: https://bonbanh.com/xe-nissan-terra-e-2.5-at-2wd-2019-6184364 (ID: 6184364)
+2025-04-12 16:42:36,473 - INFO - Successfully scraped data for car 6184364
+2025-04-12 16:42:37,482 - INFO - Saved 5 car listings to ../../data/raw/output.csv
