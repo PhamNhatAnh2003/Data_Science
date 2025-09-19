@@ -424,7 +424,7 @@ class ChototXeCrawler:
                         for ad in data['ads']:
                             if 'list_id' in ad:
                                 car_id = ad['list_id']
-                                car_urls.append(f"https://xe.chotot.com/mua-ban-oto-{car_id}.htm")
+                                car_urls.append(f"https://xe.chotot.com/mua-ban-oto/{car_id}.htm")
                         logger.info(f"Found {len(car_urls)} cars from API")
                 except json.JSONDecodeError:
                     logger.error("Could not parse API response")

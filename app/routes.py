@@ -529,7 +529,7 @@ def predict_price(input_data):
     
     try:
         # Đường dẫn tới thư mục chứa các mô hình
-        model_folder = r"C:\Users\admin\Desktop\Used_cars_prediction-main\src\models"
+        model_folder = r"C:\Users\admin\Desktop\Data_Science\src\models"
         
         # Load model columns
         model_columns = joblib.load(os.path.join(model_folder, 'model_columns.pkl'))

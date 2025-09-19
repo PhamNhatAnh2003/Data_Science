@@ -337,7 +337,7 @@ def run_preprocessing(input_file, log_id=None):
         # if not os.path.isabs(input_file):
         #     root_dir = os.getcwd()
         #     input_file = os.path.join(root_dir, input_file)
-        input_file = r"C:\Users\admin\Desktop\Used_cars_prediction-main\data\raw\raw.csv"
+        input_file = r"C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv"
         
         logger.info(f"Starting preprocessing with absolute path: {input_file}")
         
