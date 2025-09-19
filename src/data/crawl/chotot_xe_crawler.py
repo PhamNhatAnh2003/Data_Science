@@ -12,8 +12,8 @@ import sys
 
 # Cấu hình crawling (điều chỉnh ở đây)
 START_PAGE = 1  # Trang bắt đầu
-END_PAGE = 100    # Trang kết thúc
-CSV_FILE_PATH = "../../../data/raw/chotot_xe_data3.csv"  # Đường dẫn file CSV
+END_PAGE = 10    # Trang kết thúc
+CSV_FILE_PATH = "../../../data/raw/raw.csv"  # Đường dẫn file CSV
 
 # Thiết lập logging với encoding đúng
 logging.basicConfig(
@@ -278,12 +278,13 @@ class ChototXeCrawler:
         # Cập nhật lại phần trích xuất các thông số kỹ thuật
         info_items = soup.find_all('div', class_='p1ja3eq0')
         for item in info_items:
-            label_elem = item.find('span', class_='bfe6oav')
-            value_elem = item.find('span', class_='bwq0cbs')
-            
-            if label_elem and value_elem:
+            label_elem = item.find("span", attrs={"class": "bwq0cbs"}, style=True)
+
+            if label_elem and "color:#8C8C8C" in label_elem.get("style", ""):
+                spans = item.find_all("span", class_="bwq0cbs")
+                value_elem = spans[1] if len(spans) > 1 else None
                 label = label_elem.text.strip()
-                value = value_elem.text.strip()
+                value = value_elem.text.strip() if value_elem else None
                 
                 if 'Hãng' in label:
                     car_data['brand'] = value

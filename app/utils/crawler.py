@@ -326,12 +326,13 @@ class ChototXeCrawler:
         # Extract technical specs
         info_items = soup.find_all('div', class_='p1ja3eq0')
         for item in info_items:
-            label_elem = item.find('span', class_='bfe6oav')
-            value_elem = item.find('span', class_='bwq0cbs')
-            
-            if label_elem and value_elem:
+            label_elem = item.find("span", attrs={"class": "bwq0cbs"}, style=True)
+
+            if label_elem and "color:#8C8C8C" in label_elem.get("style", ""):
+                spans = item.find_all("span", class_="bwq0cbs")
+                value_elem = spans[1] if len(spans) > 1 else None
                 label = label_elem.text.strip()
-                value = value_elem.text.strip()
+                value = value_elem.text.strip() if value_elem else None
                 
                 if 'Hãng' in label:
                     car_data['brand'] = value
