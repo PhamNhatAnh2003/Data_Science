@@ -30,10 +30,14 @@ class ChototXeCrawler:
             self.app = app  # Thêm tham số app
             
             # Generate a timestamped filename for this crawl
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            self.filename = f"chotot_cars_{timestamp}.csv"
-            self.csv_path = os.path.join('data', 'raw', self.filename)
+            # timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             
+            # Ghi file mới
+            # self.filename = f"chotot_cars_{timestamp}.csv"
+            # self.csv_path = os.path.join('data', 'raw', self.filename)
+            
+            self.filename = "raw.csv"
+            self.csv_path = os.path.join("data", "raw", self.filename)
             # Create directories if they don't exist
             os.makedirs(os.path.dirname(self.csv_path), exist_ok=True)
             
@@ -63,20 +67,22 @@ class ChototXeCrawler:
     def init_csv(self):
         """Initialize the CSV file with headers."""
         try:
-            self.csv_file = open(self.csv_path, 'w', newline='', encoding='utf-8-sig')
+            self.csv_file = open(self.csv_path, 'a', newline='', encoding='utf-8-sig')
             
             # Define the fields to save
             fieldnames = [
                 'id', 'title', 'brand', 'model', 'year', 'price', 
                 'mileage', 'fuel_type', 'transmission', 'owners', 
-                'origin', 'car_type', 'seats',
+                'origin', 'car_type', 'seats','doors','version',
                 'condition', 'location', 'post_time', 'crawl_time',
-                'weight', 'load_capacity'
+                'drivetrain','engine_type','horse_power','torque',
+                'engine_capacity','fuel_consumption','air_bags',
+                'ground_clearance','weight', 'load_capacity'
             ]
             
             # Create CSV writer and write header
             self.csv_writer = csv.DictWriter(self.csv_file, fieldnames=fieldnames)
-            self.csv_writer.writeheader()
+            # self.csv_writer.writeheader()
             
             logger.info(f"CSV file initialized at: {self.csv_path}")
         except Exception as e:

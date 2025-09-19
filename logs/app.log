@@ -1,328 +1,303 @@
-2025-09-19 14:06:29,823 - app - INFO - Application initialized
-2025-09-19 14:06:29,823 - app - INFO - Checking model files for car price prediction...
-2025-09-19 14:06:29,823 - app - INFO - Model files already exist, skipping creation
-2025-09-19 14:06:29,849 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.10.137:5000
-2025-09-19 14:06:29,849 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
-2025-09-19 14:06:29,852 - werkzeug - INFO -  * Restarting with stat
-2025-09-19 14:06:32,273 - app - INFO - Application initialized
-2025-09-19 14:06:32,280 - app - INFO - Checking model files for car price prediction...
-2025-09-19 14:06:32,280 - app - INFO - Model files already exist, skipping creation
-2025-09-19 14:06:32,288 - werkzeug - WARNING -  * Debugger is active!
-2025-09-19 14:06:32,293 - werkzeug - INFO -  * Debugger PIN: 145-798-001
-2025-09-19 14:06:32,893 - app - INFO - First request processed
-2025-09-19 14:06:32,903 - app.utils.preprocessor - INFO - Starting preprocessing with absolute path: C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
-2025-09-19 14:06:32,904 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:32] "[32mPOST /preprocess HTTP/1.1[0m" 302 -
-2025-09-19 14:06:32,904 - app.utils.preprocessor - INFO - Input file size: 5680776 bytes
-2025-09-19 14:06:32,915 - app.utils.preprocessor - INFO - Updated processing log 9
-2025-09-19 14:06:32,916 - app.utils.preprocessor - INFO - Updated processing log 9
-2025-09-19 14:06:32,918 - app.utils.preprocessor - INFO - Input file size: 5680776 bytes
-2025-09-19 14:06:32,939 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:32] "GET / HTTP/1.1" 200 -
-2025-09-19 14:06:32,939 - app.utils.preprocessor - INFO - First 5 lines of input file:
-2025-09-19 14:06:32,939 - app.utils.preprocessor - INFO - Line 1: id,title,brand,model,year,price,mileage,fuel_type,transmission,owners,origin,car_type,seats,doors,version,condition,location,post_time,crawl_time,drivetrain,engine_type,horse_power,torque,engine_capacity,fuel_consumption,air_bags,ground_clearance,weight,load_capacity
-2025-09-19 14:06:32,939 - app.utils.preprocessor - INFO - Line 2: \u1ecf,Mercedes Benz E Class 2010 E250 - 80000 km,Mercedes Benz,E Class,2010,320000000,80000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,,Vi\u1ec7t Nam,Sedan,5,,,\u0110ã s\u1eed d\u1ee5ng,"Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng",\u0110\u0103ng 1 phút tr\u01b0\u1edbc,2025-05-13 12:45:11,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:32,940 - app.utils.preprocessor - INFO - Line 3: 124407149,Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM,Kia,Sedona,2020,845000000,85689,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,--,,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i",\u0110\u0103ng 2 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:32,940 - app.utils.preprocessor - INFO - Line 4: 121332884,Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch,Kia,Sorento,2016,455000000,100000,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i",\u0110\u0103ng 1 tháng tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:32,940 - app.utils.preprocessor - INFO - Line 5: 124296461,Hyundai Santa Fe 2013 2.4L 4WD - 107000 km,Hyundai,Santa Fe,2013,485000000,107000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,1,Hàn Qu\u1ed1c,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh",\u0110\u0103ng 9 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:32,940 - app.utils.preprocessor - INFO - Loading data from C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
-2025-09-19 14:06:33,134 - app.utils.preprocessor - INFO - First 5 rows of DataFrame:
-2025-09-19 14:06:33,135 - app.utils.preprocessor - INFO - Row 0: {'id': '\u1ecf', 'title': 'Mercedes Benz E Class 2010 E250 - 80000 km', 'brand': 'Mercedes Benz', 'model': 'E Class', 'year': 2010.0, 'price': 320000000, 'mileage': 80000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Vi\u1ec7t Nam', 'car_type': 'Sedan', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng', 'post_time': '\u0110\u0103ng 1 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:11', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:33,135 - app.utils.preprocessor - INFO - Row 1: {'id': '124407149', 'title': 'Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM', 'brand': 'Kia', 'model': 'Sedona', 'year': 2020.0, 'price': 845000000, 'mileage': 85689.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': '--', 'seats': nan, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 2 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:33,135 - app.utils.preprocessor - INFO - Row 2: {'id': '121332884', 'title': 'Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch', 'brand': 'Kia', 'model': 'Sorento', 'year': 2016.0, 'price': 455000000, 'mileage': 100000.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 1 tháng tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:33,136 - app.utils.preprocessor - INFO - Row 3: {'id': '124296461', 'title': 'Hyundai Santa Fe 2013 2.4L 4WD - 107000 km', 'brand': 'Hyundai', 'model': 'Santa Fe', 'year': 2013.0, 'price': 485000000, 'mileage': 107000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': 1.0, 'origin': 'Hàn Qu\u1ed1c', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 9 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:33,136 - app.utils.preprocessor - INFO - Row 4: {'id': '124942994', 'title': 'HONDA HRV G 2024 - S\u01a1n ZIN - Odo 3.700km - M\u1edaI KEN', 'brand': 'Honda', 'model': 'HR-V', 'year': 2024.0, 'price': 690000000, 'mileage': 3700.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Thái Lan', 'car_type': 'SUV / Cross over', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng Tân Phong, Qu\u1eadn 7, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 4 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:13', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:33,136 - app.utils.preprocessor - INFO - Initial data: 19910 rows, 29 columns
-2025-09-19 14:06:33,136 - app.utils.preprocessor - INFO - DataFrame columns: ['id', 'title', 'brand', 'model', 'year', 'price', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'doors', 'version', 'condition', 'location', 'post_time', 'crawl_time', 'drivetrain', 'engine_type', 'horse_power', 'torque', 'engine_capacity', 'fuel_consumption', 'air_bags', 'ground_clearance', 'weight', 'load_capacity']
-2025-09-19 14:06:33,168 - app.utils.preprocessor - INFO - Data after column selection: 19910 rows, 12 columns
-2025-09-19 14:06:33,171 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'condition', 'price']
-2025-09-19 14:06:33,171 - app.utils.preprocessor - INFO - Missing values count:
-2025-09-19 14:06:33,173 - app.utils.preprocessor - INFO -   brand: 0
-2025-09-19 14:06:33,176 - app.utils.preprocessor - INFO -   model: 0
-2025-09-19 14:06:33,177 - app.utils.preprocessor - INFO -   year: 20
-2025-09-19 14:06:33,177 - app.utils.preprocessor - INFO -   mileage: 1787
-2025-09-19 14:06:33,179 - app.utils.preprocessor - INFO -   fuel_type: 0
-2025-09-19 14:06:33,180 - app.utils.preprocessor - INFO -   transmission: 0
-2025-09-19 14:06:33,181 - app.utils.preprocessor - INFO -   owners: 11100
-2025-09-19 14:06:33,182 - app.utils.preprocessor - INFO -   origin: 0
-2025-09-19 14:06:33,185 - app.utils.preprocessor - INFO -   car_type: 3
-2025-09-19 14:06:33,186 - app.utils.preprocessor - INFO -   seats: 2131
-2025-09-19 14:06:33,188 - app.utils.preprocessor - INFO -   condition: 0
-2025-09-19 14:06:33,189 - app.utils.preprocessor - INFO -   price: 0
-2025-09-19 14:06:33,202 - app.utils.preprocessor - INFO - Filtered by year >= 2000: Removed 263 rows
-2025-09-19 14:06:33,208 - app.utils.preprocessor - INFO - Filtered origin != '\u0110ang c\u1eadp nh\u1eadt': Removed 2105 rows
-2025-09-19 14:06:33,212 - app.utils.preprocessor - INFO - Filtered car_type != '--': Removed 1868 rows
-2025-09-19 14:06:33,218 - app.utils.preprocessor - INFO - Dropped 'owners' column
-2025-09-19 14:06:33,223 - app.utils.preprocessor - INFO - Rows with at least one null value: 1898
-2025-09-19 14:06:33,227 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:06:33,229 - app.utils.preprocessor - INFO - After dropping null rows: 13776 rows left
-2025-09-19 14:06:33,240 - app.utils.preprocessor - INFO - Duplicate rows: 1019
-2025-09-19 14:06:33,247 - app.utils.preprocessor - INFO - After dropping duplicates: 12757 rows left
-2025-09-19 14:06:33,252 - app.utils.preprocessor - INFO - Filtered brand with few samples: Removed 99 rows
-2025-09-19 14:06:33,255 - app.utils.preprocessor - INFO - Filtered model with few samples: Removed 535 rows
-2025-09-19 14:06:33,258 - app.utils.preprocessor - INFO - Filtered transmission with few samples: Removed 5 rows
-2025-09-19 14:06:33,262 - app.utils.preprocessor - INFO - Filtered car_type with few samples: Removed 7 rows
-2025-09-19 14:06:33,263 - app.utils.preprocessor - INFO - After iteration 1: 12111 rows left
-2025-09-19 14:06:33,273 - app.utils.preprocessor - INFO - After iteration 2: 12111 rows left
-2025-09-19 14:06:33,275 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:06:33,276 - app.utils.preprocessor - INFO - Dropped 'condition' column - only has one value
-2025-09-19 14:06:33,276 - app.utils.preprocessor - INFO - Initial price range: 5,000,000 - 20,000,000,000 VND
-2025-09-19 14:06:33,277 - app.utils.preprocessor - INFO - Removing 22 cars with price > 5 billion VND
-2025-09-19 14:06:33,280 - app.utils.preprocessor - INFO - Removing 532 cars with price < 100 million VND
-2025-09-19 14:06:33,281 - app.utils.preprocessor - INFO - Updated price range: 102,000,000 - 4,999,000,000 VND
-2025-09-19 14:06:33,281 - app.utils.preprocessor - INFO - Final data statistics:
-2025-09-19 14:06:33,284 - app.utils.preprocessor - INFO - Rows with any null value: 0
-2025-09-19 14:06:33,288 - app.utils.preprocessor - INFO - Duplicate rows: 0
-2025-09-19 14:06:33,288 - app.utils.preprocessor - INFO - Final data: 11537 rows, 10 columns
-2025-09-19 14:06:33,288 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'origin', 'car_type', 'seats', 'price']
-2025-09-19 14:06:33,339 - app.utils.preprocessor - INFO - Preprocessed data saved to data\processed\processed_cars_20250919_140632.csv
-2025-09-19 14:06:33,345 - app.utils.preprocessor - INFO - Updated processing log 9
-2025-09-19 14:06:33,346 - app.utils.preprocessor - INFO - Preprocessing completed with result: True
-2025-09-19 14:06:41,591 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:41] "[33mGET /api/crawl-status/9 HTTP/1.1[0m" 404 -
-2025-09-19 14:06:42,669 - app.utils.preprocessor - INFO - Starting preprocessing with absolute path: C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
-2025-09-19 14:06:42,670 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:42] "[32mPOST /preprocess HTTP/1.1[0m" 302 -
-2025-09-19 14:06:42,670 - app.utils.preprocessor - INFO - Input file size: 5680776 bytes
-2025-09-19 14:06:42,677 - app.utils.preprocessor - INFO - Updated processing log 10
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Updated processing log 10
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Input file size: 5680776 bytes
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - First 5 lines of input file:
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Line 1: id,title,brand,model,year,price,mileage,fuel_type,transmission,owners,origin,car_type,seats,doors,version,condition,location,post_time,crawl_time,drivetrain,engine_type,horse_power,torque,engine_capacity,fuel_consumption,air_bags,ground_clearance,weight,load_capacity
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Line 2: \u1ecf,Mercedes Benz E Class 2010 E250 - 80000 km,Mercedes Benz,E Class,2010,320000000,80000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,,Vi\u1ec7t Nam,Sedan,5,,,\u0110ã s\u1eed d\u1ee5ng,"Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng",\u0110\u0103ng 1 phút tr\u01b0\u1edbc,2025-05-13 12:45:11,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Line 3: 124407149,Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM,Kia,Sedona,2020,845000000,85689,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,--,,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i",\u0110\u0103ng 2 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Line 4: 121332884,Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch,Kia,Sorento,2016,455000000,100000,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i",\u0110\u0103ng 1 tháng tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Line 5: 124296461,Hyundai Santa Fe 2013 2.4L 4WD - 107000 km,Hyundai,Santa Fe,2013,485000000,107000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,1,Hàn Qu\u1ed1c,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh",\u0110\u0103ng 9 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
-2025-09-19 14:06:42,678 - app.utils.preprocessor - INFO - Loading data from C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
-2025-09-19 14:06:42,854 - app.utils.preprocessor - INFO - First 5 rows of DataFrame:
-2025-09-19 14:06:42,854 - app.utils.preprocessor - INFO - Row 0: {'id': '\u1ecf', 'title': 'Mercedes Benz E Class 2010 E250 - 80000 km', 'brand': 'Mercedes Benz', 'model': 'E Class', 'year': 2010.0, 'price': 320000000, 'mileage': 80000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Vi\u1ec7t Nam', 'car_type': 'Sedan', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng', 'post_time': '\u0110\u0103ng 1 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:11', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - Row 1: {'id': '124407149', 'title': 'Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM', 'brand': 'Kia', 'model': 'Sedona', 'year': 2020.0, 'price': 845000000, 'mileage': 85689.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': '--', 'seats': nan, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 2 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - Row 2: {'id': '121332884', 'title': 'Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch', 'brand': 'Kia', 'model': 'Sorento', 'year': 2016.0, 'price': 455000000, 'mileage': 100000.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 1 tháng tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - Row 3: {'id': '124296461', 'title': 'Hyundai Santa Fe 2013 2.4L 4WD - 107000 km', 'brand': 'Hyundai', 'model': 'Santa Fe', 'year': 2013.0, 'price': 485000000, 'mileage': 107000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': 1.0, 'origin': 'Hàn Qu\u1ed1c', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 9 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - Row 4: {'id': '124942994', 'title': 'HONDA HRV G 2024 - S\u01a1n ZIN - Odo 3.700km - M\u1edaI KEN', 'brand': 'Honda', 'model': 'HR-V', 'year': 2024.0, 'price': 690000000, 'mileage': 3700.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Thái Lan', 'car_type': 'SUV / Cross over', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng Tân Phong, Qu\u1eadn 7, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 4 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:13', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - Initial data: 19910 rows, 29 columns
-2025-09-19 14:06:42,855 - app.utils.preprocessor - INFO - DataFrame columns: ['id', 'title', 'brand', 'model', 'year', 'price', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'doors', 'version', 'condition', 'location', 'post_time', 'crawl_time', 'drivetrain', 'engine_type', 'horse_power', 'torque', 'engine_capacity', 'fuel_consumption', 'air_bags', 'ground_clearance', 'weight', 'load_capacity']
-2025-09-19 14:06:42,864 - app.utils.preprocessor - INFO - Data after column selection: 19910 rows, 12 columns
-2025-09-19 14:06:42,864 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'condition', 'price']
-2025-09-19 14:06:42,864 - app.utils.preprocessor - INFO - Missing values count:
-2025-09-19 14:06:42,865 - app.utils.preprocessor - INFO -   brand: 0
-2025-09-19 14:06:42,865 - app.utils.preprocessor - INFO -   model: 0
-2025-09-19 14:06:42,865 - app.utils.preprocessor - INFO -   year: 20
-2025-09-19 14:06:42,866 - app.utils.preprocessor - INFO -   mileage: 1787
-2025-09-19 14:06:42,866 - app.utils.preprocessor - INFO -   fuel_type: 0
-2025-09-19 14:06:42,867 - app.utils.preprocessor - INFO -   transmission: 0
-2025-09-19 14:06:42,867 - app.utils.preprocessor - INFO -   owners: 11100
-2025-09-19 14:06:42,868 - app.utils.preprocessor - INFO -   origin: 0
-2025-09-19 14:06:42,868 - app.utils.preprocessor - INFO -   car_type: 3
-2025-09-19 14:06:42,868 - app.utils.preprocessor - INFO -   seats: 2131
-2025-09-19 14:06:42,869 - app.utils.preprocessor - INFO -   condition: 0
-2025-09-19 14:06:42,869 - app.utils.preprocessor - INFO -   price: 0
-2025-09-19 14:06:42,872 - app.utils.preprocessor - INFO - Filtered by year >= 2000: Removed 263 rows
-2025-09-19 14:06:42,876 - app.utils.preprocessor - INFO - Filtered origin != '\u0110ang c\u1eadp nh\u1eadt': Removed 2105 rows
-2025-09-19 14:06:42,879 - app.utils.preprocessor - INFO - Filtered car_type != '--': Removed 1868 rows
-2025-09-19 14:06:42,881 - app.utils.preprocessor - INFO - Dropped 'owners' column
-2025-09-19 14:06:42,884 - app.utils.preprocessor - INFO - Rows with at least one null value: 1898
-2025-09-19 14:06:42,889 - app.utils.preprocessor - INFO - After dropping null rows: 13776 rows left
-2025-09-19 14:06:42,895 - app.utils.preprocessor - INFO - Duplicate rows: 1019
-2025-09-19 14:06:42,902 - app.utils.preprocessor - INFO - After dropping duplicates: 12757 rows left
-2025-09-19 14:06:42,905 - app.utils.preprocessor - INFO - Filtered brand with few samples: Removed 99 rows
-2025-09-19 14:06:42,908 - app.utils.preprocessor - INFO - Filtered model with few samples: Removed 535 rows
-2025-09-19 14:06:42,911 - app.utils.preprocessor - INFO - Filtered transmission with few samples: Removed 5 rows
-2025-09-19 14:06:42,915 - app.utils.preprocessor - INFO - Filtered car_type with few samples: Removed 7 rows
-2025-09-19 14:06:42,916 - app.utils.preprocessor - INFO - After iteration 1: 12111 rows left
-2025-09-19 14:06:42,926 - app.utils.preprocessor - INFO - After iteration 2: 12111 rows left
-2025-09-19 14:06:42,928 - app.utils.preprocessor - INFO - Dropped 'condition' column - only has one value
-2025-09-19 14:06:42,928 - app.utils.preprocessor - INFO - Initial price range: 5,000,000 - 20,000,000,000 VND
-2025-09-19 14:06:42,928 - app.utils.preprocessor - INFO - Removing 22 cars with price > 5 billion VND
-2025-09-19 14:06:42,930 - app.utils.preprocessor - INFO - Removing 532 cars with price < 100 million VND
-2025-09-19 14:06:42,932 - app.utils.preprocessor - INFO - Updated price range: 102,000,000 - 4,999,000,000 VND
-2025-09-19 14:06:42,932 - app.utils.preprocessor - INFO - Final data statistics:
-2025-09-19 14:06:42,934 - app.utils.preprocessor - INFO - Rows with any null value: 0
-2025-09-19 14:06:42,938 - app.utils.preprocessor - INFO - Duplicate rows: 0
-2025-09-19 14:06:42,938 - app.utils.preprocessor - INFO - Final data: 11537 rows, 10 columns
-2025-09-19 14:06:42,938 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'origin', 'car_type', 'seats', 'price']
-2025-09-19 14:06:42,970 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:42] "GET / HTTP/1.1" 200 -
-2025-09-19 14:06:42,988 - app.utils.preprocessor - INFO - Preprocessed data saved to data\processed\processed_cars_20250919_140642.csv
-2025-09-19 14:06:42,994 - app.utils.preprocessor - INFO - Updated processing log 10
-2025-09-19 14:06:42,995 - app.utils.preprocessor - INFO - Preprocessing completed with result: True
-2025-09-19 14:06:43,294 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:06:43,295 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:06:52,446 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:52] "[33mGET /api/crawl-status/10 HTTP/1.1[0m" 404 -
-2025-09-19 14:06:59,455 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:06:59] "[33mGET /api/crawl-status/10 HTTP/1.1[0m" 404 -
-2025-09-19 14:07:00,150 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:00] "[33mGET /api/crawl-status/10 HTTP/1.1[0m" 404 -
-2025-09-19 14:07:06,802 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:06] "GET / HTTP/1.1" 200 -
-2025-09-19 14:07:06,812 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:07:07,064 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:07:14,571 - app - INFO - Starting import at 2025-09-19 14:07:14.571260
-2025-09-19 14:07:14,572 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:14] "[32mPOST /import-to-db HTTP/1.1[0m" 302 -
-2025-09-19 14:07:14,572 - app.utils.database - INFO - Importing data from data\processed\processed_cars_20250919_140642.csv
-2025-09-19 14:07:14,584 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:14] "GET / HTTP/1.1" 200 -
-2025-09-19 14:07:14,596 - app.utils.database - INFO - Loaded 11537 rows from data\processed\processed_cars_20250919_140642.csv
-2025-09-19 14:07:14,597 - app.utils.database - INFO - Found 25 unique brands
-2025-09-19 14:07:14,615 - app.utils.database - INFO - Found 175 unique brand-model combinations
-2025-09-19 14:07:14,792 - app.utils.database - INFO - Found 398 unique model-type combinations
-2025-09-19 14:07:14,818 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:07:14,913 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:07:15,357 - app.utils.database - INFO - Added car type: Sedan (Model: Cayenne)
-2025-09-19 14:07:15,362 - app.utils.database - INFO - Found 4 unique fuel types
-2025-09-19 14:07:15,365 - app.utils.database - INFO - Found 4 unique transmission types
-2025-09-19 14:07:15,368 - app.utils.database - INFO - Found 26 unique years
-2025-09-19 14:07:15,377 - app.utils.database - INFO - Found 10 unique seat counts
-2025-09-19 14:07:15,382 - app.utils.database - INFO - Found 10 unique origins
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Import completed successfully!
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Brands: 25
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Models: 177
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Car Types: 402
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Fuel Types: 4
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Transmissions: 4
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Years: 26
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Seats: 10
-2025-09-19 14:07:15,393 - app.utils.database - INFO - Origins: 10
-2025-09-19 14:07:15,394 - app - INFO - Successfully imported data from data\processed\processed_cars_20250919_140642.csv in 0.82 seconds
-2025-09-19 14:07:25,335 - app - INFO - \u0110ã backup cleaned.csv thành C:\Users\Admin\Desktop\Data_Science\data\preprocessing\cleaned_backup_20250919_140725.csv
-2025-09-19 14:07:25,344 - app - INFO - \u0110ã c\u1eadp nh\u1eadt cleaned.csv t\u1eeb C:\Users\Admin\Desktop\Data_Science\data\processed\processed_cars_20250919_140642.csv
-2025-09-19 14:07:25,345 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:25] "[32mPOST /train-models HTTP/1.1[0m" 302 -
-2025-09-19 14:07:25,352 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:25] "GET / HTTP/1.1" 200 -
-2025-09-19 14:07:25,614 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:07:25,676 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:07:25,976 - app - INFO - \u0110ào t\u1ea1o Linear Regression...
-2025-09-19 14:07:26,345 - app - INFO - \u0110ào t\u1ea1o Random Forest...
-2025-09-19 14:07:34,726 - app - INFO - \u0110ào t\u1ea1o XGBoost...
-2025-09-19 14:07:38,056 - app - INFO - \u2705 Hoàn t\u1ea5t \u0111ào t\u1ea1o mô hình!
-2025-09-19 14:07:52,268 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:52] "GET /predict HTTP/1.1" 200 -
-2025-09-19 14:07:52,339 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:07:52,496 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:52] "[36mGET /static/js/predict.js HTTP/1.1[0m" 304 -
-2025-09-19 14:07:53,705 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:53] "GET /api/get-models/19 HTTP/1.1" 200 -
-2025-09-19 14:07:56,247 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:07:56] "GET /api/get-car-types/82 HTTP/1.1" 200 -
-2025-09-19 14:08:06,502 - app - INFO - Price prediction results - LR: 1156377631, RF: 665790000, XGB: 1104113792
-2025-09-19 14:08:06,561 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:06] "POST /predict HTTP/1.1" 200 -
-2025-09-19 14:08:06,571 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:08:06,572 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:06] "[36mGET /static/js/predict.js HTTP/1.1[0m" 304 -
-2025-09-19 14:08:12,728 - app - INFO - Price prediction results - LR: 1156377631, RF: 665790000, XGB: 1104113792
-2025-09-19 14:08:12,781 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:12] "POST /predict HTTP/1.1" 200 -
-2025-09-19 14:08:12,793 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:08:12,794 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:08:12] "[36mGET /static/js/predict.js HTTP/1.1[0m" 304 -
-2025-09-19 14:13:12,692 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:12] "GET / HTTP/1.1" 200 -
-2025-09-19 14:13:12,781 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:13:12,954 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:13:16,250 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:16] "[32mPOST /crawl HTTP/1.1[0m" 302 -
-2025-09-19 14:13:16,251 - app.utils.crawler - INFO - CSV file initialized at: data\raw\chotot_cars_20250919_141316.csv
-2025-09-19 14:13:16,257 - app.utils.crawler - INFO - Starting crawl from page 1 to 1
-2025-09-19 14:13:16,258 - app.utils.crawler - INFO - Crawling page: https://xe.chotot.com/mua-ban-oto?page=1
-2025-09-19 14:13:16,269 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:16] "GET / HTTP/1.1" 200 -
-2025-09-19 14:13:16,501 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-09-19 14:13:16,595 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
-2025-09-19 14:13:17,543 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto?page=1: 820669 bytes
-2025-09-19 14:13:17,609 - app.utils.crawler - INFO - Found 0 unique car URLs
-2025-09-19 14:13:17,609 - app.utils.crawler - INFO - No URLs found in HTML, trying API...
-2025-09-19 14:13:19,121 - app.utils.crawler - INFO - Response received from https://gateway.chotot.com/v1/public/ad-listing?cg=2010&limit=20&o=0&st=s,k&key_param_included=true: 125967 bytes
-2025-09-19 14:13:19,124 - app.utils.crawler - INFO - Found 20 cars from API
-2025-09-19 14:13:19,124 - app.utils.crawler - INFO - Found 20 cars on page 1
-2025-09-19 14:13:20,788 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831656.htm: 154199 bytes
-2025-09-19 14:13:20,804 - app.utils.crawler - INFO - Extracted car ID 127831656: Toyota Vios 2022 E 1.5 MT - 43000 km, Price: 385000000, Year: 2022
-2025-09-19 14:13:20,804 - app.utils.crawler - INFO - Saved car ID: 127831656 to CSV. Total cars: 1
-2025-09-19 14:13:20,809 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 1
-2025-09-19 14:13:20,809 - app.utils.crawler - INFO - Saved car: Toyota Vios 2022 E 1.5 MT - 43000 km - ID: 127831656 - Total: 1
-2025-09-19 14:13:23,469 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831631.htm: 176768 bytes
-2025-09-19 14:13:23,486 - app.utils.crawler - INFO - Extracted car ID 127831631: \u2764\ufe0f MERCEDES S500 2015 Maybach–\u0110\U0001d408\u0309\U0001d40d\U0001d407 \U0001d402\U0001d407\U0001d414\U0001d400\u0302\u0309\U0001d40d \U0001d417\U0001d400 \U0001d407\U0001d40e\U0001d400, Price: 1298000000, Year: 2014
-2025-09-19 14:13:23,487 - app.utils.crawler - INFO - Saved car ID: 127831631 to CSV. Total cars: 2
-2025-09-19 14:13:23,492 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 2
-2025-09-19 14:13:23,492 - app.utils.crawler - INFO - Saved car: \u2764\ufe0f MERCEDES S500 2015 Maybach–\u0110\U0001d408\u0309\U0001d40d\U0001d407 \U0001d402\U0001d407\U0001d414\U0001d400\u0302\u0309\U0001d40d \U0001d417\U0001d400 \U0001d407\U0001d40e\U0001d400 - ID: 127831631 - Total: 2
-2025-09-19 14:13:25,041 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831610.htm: 154830 bytes
-2025-09-19 14:13:25,056 - app.utils.crawler - INFO - Extracted car ID 127831610: Ford Ranger 2015 Wildtrak 3.2L 4x4 AT - 180000 km, Price: 550000000, Year: 2015
-2025-09-19 14:13:25,056 - app.utils.crawler - INFO - Saved car ID: 127831610 to CSV. Total cars: 3
-2025-09-19 14:13:25,061 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 3
-2025-09-19 14:13:25,061 - app.utils.crawler - INFO - Saved car: Ford Ranger 2015 Wildtrak 3.2L 4x4 AT - 180000 km - ID: 127831610 - Total: 3
-2025-09-19 14:13:26,335 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127673545.htm: 165779 bytes
-2025-09-19 14:13:26,364 - app.utils.crawler - INFO - Extracted car ID 127673545: Toyota Fortuner 2.7AT 4X2 2022 Xe hãng bán, Price: 930000000, Year: 2022
-2025-09-19 14:13:26,364 - app.utils.crawler - INFO - Saved car ID: 127673545 to CSV. Total cars: 4
-2025-09-19 14:13:26,370 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 4
-2025-09-19 14:13:26,370 - app.utils.crawler - INFO - Saved car: Toyota Fortuner 2.7AT 4X2 2022 Xe hãng bán - ID: 127673545 - Total: 4
-2025-09-19 14:13:27,875 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127195926.htm: 155035 bytes
-2025-09-19 14:13:27,891 - app.utils.crawler - INFO - Extracted car ID 127195926: GD c\u1ea7n bán Hyundai Grand i10, Price: 269000000, Year: 2023
-2025-09-19 14:13:27,891 - app.utils.crawler - INFO - Saved car ID: 127195926 to CSV. Total cars: 5
-2025-09-19 14:13:27,896 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 5
-2025-09-19 14:13:27,896 - app.utils.crawler - INFO - Saved car: GD c\u1ea7n bán Hyundai Grand i10 - ID: 127195926 - Total: 5
-2025-09-19 14:13:30,439 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127517074.htm: 164091 bytes
-2025-09-19 14:13:30,455 - app.utils.crawler - INFO - Extracted car ID 127517074: TOYOTA RUSH 2018, T\u1ef0 \u0110\u1ed8NG 1.5, 7 CH\u1ed6 2 DÀN L\u1ea0NH, Price: 410000000, Year: 2018
-2025-09-19 14:13:30,456 - app.utils.crawler - INFO - Saved car ID: 127517074 to CSV. Total cars: 6
-2025-09-19 14:13:30,466 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 6
-2025-09-19 14:13:30,467 - app.utils.crawler - INFO - Saved car: TOYOTA RUSH 2018, T\u1ef0 \u0110\u1ed8NG 1.5, 7 CH\u1ed6 2 DÀN L\u1ea0NH - ID: 127517074 - Total: 6
-2025-09-19 14:13:32,456 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:32] "GET /api/crawl-status/8 HTTP/1.1" 200 -
-2025-09-19 14:13:33,097 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831552.htm: 157166 bytes
-2025-09-19 14:13:33,112 - app.utils.crawler - INFO - Extracted car ID 127831552: 2019 1.8E CVT - 59000 km, Price: 520000000, Year: 2019
-2025-09-19 14:13:33,112 - app.utils.crawler - INFO - Saved car ID: 127831552 to CSV. Total cars: 7
-2025-09-19 14:13:33,118 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 7
-2025-09-19 14:13:33,118 - app.utils.crawler - INFO - Saved car: 2019 1.8E CVT - 59000 km - ID: 127831552 - Total: 7
-2025-09-19 14:13:35,639 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127346462.htm: 186469 bytes
-2025-09-19 14:13:35,657 - app.utils.crawler - INFO - Extracted car ID 127346462: Toyota Zace 2001 GL - 160000 km, Price: 85000000, Year: 2001
-2025-09-19 14:13:35,657 - app.utils.crawler - INFO - Saved car ID: 127346462 to CSV. Total cars: 8
-2025-09-19 14:13:35,668 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 8
-2025-09-19 14:13:35,668 - app.utils.crawler - INFO - Saved car: Toyota Zace 2001 GL - 160000 km - ID: 127346462 - Total: 8
-2025-09-19 14:13:37,843 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127321191.htm: 156084 bytes
-2025-09-19 14:13:37,859 - app.utils.crawler - INFO - Extracted car ID 127321191: C\u1ea6N BÁN NHANH TOYOTA INNOVA 2.0G, Price: 317000000, Year: 2013
-2025-09-19 14:13:37,859 - app.utils.crawler - INFO - Saved car ID: 127321191 to CSV. Total cars: 9
-2025-09-19 14:13:37,871 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 9
-2025-09-19 14:13:37,871 - app.utils.crawler - INFO - Saved car: C\u1ea6N BÁN NHANH TOYOTA INNOVA 2.0G - ID: 127321191 - Total: 9
-2025-09-19 14:13:41,401 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/115461156.htm: 204233 bytes
-2025-09-19 14:13:41,421 - app.utils.crawler - INFO - Extracted car ID 115461156: \U0001f697 Honda Odyssey 2.4 AT 2016 model 2017 , nh\u1eadp Nh\u1eadt, Price: 916000000, Year: 2016
-2025-09-19 14:13:41,422 - app.utils.crawler - INFO - Saved car ID: 115461156 to CSV. Total cars: 10
-2025-09-19 14:13:41,426 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 10
-2025-09-19 14:13:41,426 - app.utils.crawler - INFO - Saved car: \U0001f697 Honda Odyssey 2.4 AT 2016 model 2017 , nh\u1eadp Nh\u1eadt - ID: 115461156 - Total: 10
-2025-09-19 14:13:43,884 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/123702610.htm: 193508 bytes
-2025-09-19 14:13:43,904 - app.utils.crawler - INFO - Extracted car ID 123702610: VinFast Lux SA2.0 2019 Plus 2.0 AT - 89638 km, Price: 595000000, Year: 2019
-2025-09-19 14:13:43,905 - app.utils.crawler - INFO - Saved car ID: 123702610 to CSV. Total cars: 11
-2025-09-19 14:13:43,910 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 11
-2025-09-19 14:13:43,910 - app.utils.crawler - INFO - Saved car: VinFast Lux SA2.0 2019 Plus 2.0 AT - 89638 km - ID: 123702610 - Total: 11
-2025-09-19 14:13:46,860 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127221126.htm: 191107 bytes
-2025-09-19 14:13:46,883 - app.utils.crawler - INFO - Extracted car ID 127221126: Mercedes E300 AMG sx2019 odo 38k km bi\u1ec3n SG 1 ch\u1ee7, Price: 1339000000, Year: 2019
-2025-09-19 14:13:46,883 - app.utils.crawler - INFO - Saved car ID: 127221126 to CSV. Total cars: 12
-2025-09-19 14:13:46,888 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 12
-2025-09-19 14:13:46,888 - app.utils.crawler - INFO - Saved car: Mercedes E300 AMG sx2019 odo 38k km bi\u1ec3n SG 1 ch\u1ee7 - ID: 127221126 - Total: 12
-2025-09-19 14:13:47,141 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:13:47] "GET /api/crawl-status/8 HTTP/1.1" 200 -
-2025-09-19 14:13:49,501 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127649942.htm: 192097 bytes
-2025-09-19 14:13:49,521 - app.utils.crawler - INFO - Extracted car ID 127649942: Lexus RX 350 F Sport Model 2017, Price: 2199000000, Year: 2016
-2025-09-19 14:13:49,521 - app.utils.crawler - INFO - Saved car ID: 127649942 to CSV. Total cars: 13
-2025-09-19 14:13:49,525 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 13
-2025-09-19 14:13:49,525 - app.utils.crawler - INFO - Saved car: Lexus RX 350 F Sport Model 2017 - ID: 127649942 - Total: 13
-2025-09-19 14:13:52,131 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831261.htm: 153690 bytes
-2025-09-19 14:13:52,145 - app.utils.crawler - INFO - Extracted car ID 127831261: tr\u1ea3 tr\u01b0\u1edbc 130tr nh\u1eadn xe ngay, Price: 525000000, Year: 2025
-2025-09-19 14:13:52,146 - app.utils.crawler - INFO - Saved car ID: 127831261 to CSV. Total cars: 14
-2025-09-19 14:13:52,155 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 14
-2025-09-19 14:13:52,156 - app.utils.crawler - INFO - Saved car: tr\u1ea3 tr\u01b0\u1edbc 130tr nh\u1eadn xe ngay - ID: 127831261 - Total: 14
-2025-09-19 14:13:54,243 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127233736.htm: 154959 bytes
-2025-09-19 14:13:54,259 - app.utils.crawler - INFO - Extracted car ID 127233736: Hyundai Elantra 2023 N-Line 1.6 Turbo Chính Ch\u1ee7, Price: 645000000, Year: 2023
-2025-09-19 14:13:54,259 - app.utils.crawler - INFO - Saved car ID: 127233736 to CSV. Total cars: 15
-2025-09-19 14:13:54,264 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 15
-2025-09-19 14:13:54,264 - app.utils.crawler - INFO - Saved car: Hyundai Elantra 2023 N-Line 1.6 Turbo Chính Ch\u1ee7 - ID: 127233736 - Total: 15
-2025-09-19 14:13:55,692 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831396.htm: 198201 bytes
-2025-09-19 14:13:55,711 - app.utils.crawler - INFO - Extracted car ID 127831396: Porsche Cayenne Turbo Diesel 2010 - Bao Check Hãng, Price: 1360000000, Year: 2010
-2025-09-19 14:13:55,711 - app.utils.crawler - INFO - Saved car ID: 127831396 to CSV. Total cars: 16
-2025-09-19 14:13:55,716 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 16
-2025-09-19 14:13:55,716 - app.utils.crawler - INFO - Saved car: Porsche Cayenne Turbo Diesel 2010 - Bao Check Hãng - ID: 127831396 - Total: 16
-2025-09-19 14:13:57,458 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/121250840.htm: 201445 bytes
-2025-09-19 14:13:57,477 - app.utils.crawler - INFO - Extracted car ID 121250840: Honda HR-V 2018 1.8 L nh\u1eadp Thái Lan - 78.797 km, Price: 520000000, Year: 2018
-2025-09-19 14:13:57,478 - app.utils.crawler - INFO - Saved car ID: 121250840 to CSV. Total cars: 17
-2025-09-19 14:13:57,483 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 17
-2025-09-19 14:13:57,483 - app.utils.crawler - INFO - Saved car: Honda HR-V 2018 1.8 L nh\u1eadp Thái Lan - 78.797 km - ID: 121250840 - Total: 17
-2025-09-19 14:14:00,021 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/126895864.htm: 174306 bytes
-2025-09-19 14:14:00,038 - app.utils.crawler - INFO - Extracted car ID 126895864: Kia Forte 2013 EX 1.6 MT - 112000 km, Price: 218000000, Year: 2013
-2025-09-19 14:14:00,038 - app.utils.crawler - INFO - Saved car ID: 126895864 to CSV. Total cars: 18
-2025-09-19 14:14:00,043 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 18
-2025-09-19 14:14:00,043 - app.utils.crawler - INFO - Saved car: Kia Forte 2013 EX 1.6 MT - 112000 km - ID: 126895864 - Total: 18
-2025-09-19 14:14:02,070 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127831325.htm: 162537 bytes
-2025-09-19 14:14:02,086 - app.utils.crawler - INFO - Extracted car ID 127831325: Toyota Camry 2.0E 2009 model 2010 bks Hà N\u1ed9i, Price: 315000000, Year: 2009
-2025-09-19 14:14:02,087 - app.utils.crawler - INFO - Saved car ID: 127831325 to CSV. Total cars: 19
-2025-09-19 14:14:02,100 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 19
-2025-09-19 14:14:02,100 - app.utils.crawler - INFO - Saved car: Toyota Camry 2.0E 2009 model 2010 bks Hà N\u1ed9i - ID: 127831325 - Total: 19
-2025-09-19 14:14:02,458 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:14:02] "GET /api/crawl-status/8 HTTP/1.1" 200 -
-2025-09-19 14:14:04,946 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/125464904.htm: 166197 bytes
-2025-09-19 14:14:04,970 - app.utils.crawler - INFO - Extracted car ID 125464904: Hyundai Kona 2019 2.0 ATH - 69000 km, Price: 460000000, Year: 2019
-2025-09-19 14:14:04,970 - app.utils.crawler - INFO - Saved car ID: 125464904 to CSV. Total cars: 20
-2025-09-19 14:14:04,975 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 20
-2025-09-19 14:14:04,975 - app.utils.crawler - INFO - Saved car: Hyundai Kona 2019 2.0 ATH - 69000 km - ID: 125464904 - Total: 20
-2025-09-19 14:14:04,980 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 20
-2025-09-19 14:14:05,982 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 20
-2025-09-19 14:14:05,982 - app.utils.crawler - INFO - Page 1: Crawled 20 cars
-2025-09-19 14:14:06,997 - app.utils.crawler - INFO - Successfully updated crawl log 8: records_count = 20
-2025-09-19 14:14:06,997 - app.utils.crawler - INFO - Crawl completed! Total cars: 20
-2025-09-19 14:14:06,997 - app.utils.crawler - INFO - CSV file closed
+2025-09-19 14:54:16,639 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:16] "GET / HTTP/1.1" 200 -
+2025-09-19 14:54:16,714 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:54:16,899 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:54:21,362 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:21] "[32mPOST /crawl HTTP/1.1[0m" 302 -
+2025-09-19 14:54:21,363 - app.utils.crawler - INFO - CSV file initialized at: data\raw\raw.csv
+2025-09-19 14:54:21,368 - app.utils.crawler - INFO - Starting crawl from page 1 to 1
+2025-09-19 14:54:21,369 - app.utils.crawler - INFO - Crawling page: https://xe.chotot.com/mua-ban-oto?page=1
+2025-09-19 14:54:21,381 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:21] "GET / HTTP/1.1" 200 -
+2025-09-19 14:54:21,617 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:54:21,696 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:54:23,150 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto?page=1: 800273 bytes
+2025-09-19 14:54:23,218 - app.utils.crawler - INFO - Found 0 unique car URLs
+2025-09-19 14:54:23,218 - app.utils.crawler - INFO - No URLs found in HTML, trying API...
+2025-09-19 14:54:24,670 - app.utils.crawler - INFO - Response received from https://gateway.chotot.com/v1/public/ad-listing?cg=2010&limit=20&o=0&st=s,k&key_param_included=true: 120476 bytes
+2025-09-19 14:54:24,672 - app.utils.crawler - INFO - Found 20 cars from API
+2025-09-19 14:54:24,672 - app.utils.crawler - INFO - Found 20 cars on page 1
+2025-09-19 14:54:27,236 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/124018903.htm: 151538 bytes
+2025-09-19 14:54:27,251 - app.utils.crawler - INFO - Extracted car ID 124018903: \U0001f4a2New CX5 Sport - Giá còn th\u01b0\u01a1ng l\u01b0\u1ee3ng + B\u1ea3o hi\u1ec3m, Price: 816000000, Year: 2025
+2025-09-19 14:54:27,251 - app.utils.crawler - INFO - Saved car ID: 124018903 to CSV. Total cars: 1
+2025-09-19 14:54:27,262 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 1
+2025-09-19 14:54:27,262 - app.utils.crawler - INFO - Saved car: \U0001f4a2New CX5 Sport - Giá còn th\u01b0\u01a1ng l\u01b0\u1ee3ng + B\u1ea3o hi\u1ec3m - ID: 124018903 - Total: 1
+2025-09-19 14:54:29,477 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832932.htm: 152418 bytes
+2025-09-19 14:54:29,493 - app.utils.crawler - INFO - Extracted car ID 127832932: 2003 2.0 AT - 1111 km, Price: 65000000, Year: 2003
+2025-09-19 14:54:29,493 - app.utils.crawler - INFO - Saved car ID: 127832932 to CSV. Total cars: 2
+2025-09-19 14:54:29,504 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 2
+2025-09-19 14:54:29,504 - app.utils.crawler - INFO - Saved car: 2003 2.0 AT - 1111 km - ID: 127832932 - Total: 2
+2025-09-19 14:54:32,083 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832905.htm: 161031 bytes
+2025-09-19 14:54:32,099 - app.utils.crawler - INFO - Extracted car ID 127832905: Mazda 2 \u0111\u1eddi 2019 b\u1ea3n Deluxe Sedan - 29000 km, Price: 345000000, Year: 2019
+2025-09-19 14:54:32,099 - app.utils.crawler - INFO - Saved car ID: 127832905 to CSV. Total cars: 3
+2025-09-19 14:54:32,110 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 3
+2025-09-19 14:54:32,110 - app.utils.crawler - INFO - Saved car: Mazda 2 \u0111\u1eddi 2019 b\u1ea3n Deluxe Sedan - 29000 km - ID: 127832905 - Total: 3
+2025-09-19 14:54:33,756 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127808587.htm: 164478 bytes
+2025-09-19 14:54:33,774 - app.utils.crawler - INFO - Extracted car ID 127808587: Toyota Fortuner 2014 2.7V 4x2 AT - 176000 km, Price: 430000000, Year: 2014
+2025-09-19 14:54:33,774 - app.utils.crawler - INFO - Saved car ID: 127808587 to CSV. Total cars: 4
+2025-09-19 14:54:33,779 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 4
+2025-09-19 14:54:33,780 - app.utils.crawler - INFO - Saved car: Toyota Fortuner 2014 2.7V 4x2 AT - 176000 km - ID: 127808587 - Total: 4
+2025-09-19 14:54:35,396 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832849.htm: 179188 bytes
+2025-09-19 14:54:35,413 - app.utils.crawler - INFO - Extracted car ID 127832849: Nissan Sunny 2017 t\u1ef1 \u0111\u1ed9ng 1.5 XV Premium - 99000, Price: 269000000, Year: 2017
+2025-09-19 14:54:35,413 - app.utils.crawler - INFO - Saved car ID: 127832849 to CSV. Total cars: 5
+2025-09-19 14:54:35,428 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 5
+2025-09-19 14:54:35,429 - app.utils.crawler - INFO - Saved car: Nissan Sunny 2017 t\u1ef1 \u0111\u1ed9ng 1.5 XV Premium - 99000 - ID: 127832849 - Total: 5
+2025-09-19 14:54:37,456 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:54:37] "GET /api/crawl-status/20 HTTP/1.1" 200 -
+2025-09-19 14:54:37,483 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/120584444.htm: 191450 bytes
+2025-09-19 14:54:37,582 - app.utils.crawler - INFO - Extracted car ID 120584444: Polo 2021 odo 15000 km lên nhi\u1ec1u \u0111\u1ed3 ch\u01a1i x\u1ecbn, Price: 449000000, Year: 2021
+2025-09-19 14:54:37,582 - app.utils.crawler - INFO - Saved car ID: 120584444 to CSV. Total cars: 6
+2025-09-19 14:54:37,587 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 6
+2025-09-19 14:54:37,587 - app.utils.crawler - INFO - Saved car: Polo 2021 odo 15000 km lên nhi\u1ec1u \u0111\u1ed3 ch\u01a1i x\u1ecbn - ID: 120584444 - Total: 6
+2025-09-19 14:54:39,272 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/126465138.htm: 160160 bytes
+2025-09-19 14:54:39,287 - app.utils.crawler - INFO - Extracted car ID 126465138: Bán Fadil 2022 Màu \u0110\u1ecf, Odo 3 V\u1ea1n 4, Giá t\u1ed1t., Price: 295000000, Year: 2022
+2025-09-19 14:54:39,287 - app.utils.crawler - INFO - Saved car ID: 126465138 to CSV. Total cars: 7
+2025-09-19 14:54:39,292 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 7
+2025-09-19 14:54:39,292 - app.utils.crawler - INFO - Saved car: Bán Fadil 2022 Màu \u0110\u1ecf, Odo 3 V\u1ea1n 4, Giá t\u1ed1t. - ID: 126465138 - Total: 7
+2025-09-19 14:54:40,673 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127651266.htm: 171583 bytes
+2025-09-19 14:54:40,690 - app.utils.crawler - INFO - Extracted car ID 127651266: Kia Carens 1 ch\u1ee7 b\u1ea3n full gh\u1ebf \u0111i\u1ec7n c\u1eeda s\u1ed5 tr\u1eddi, Price: 225000000, Year: 2011
+2025-09-19 14:54:40,690 - app.utils.crawler - INFO - Saved car ID: 127651266 to CSV. Total cars: 8
+2025-09-19 14:54:40,695 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 8
+2025-09-19 14:54:40,695 - app.utils.crawler - INFO - Saved car: Kia Carens 1 ch\u1ee7 b\u1ea3n full gh\u1ebf \u0111i\u1ec7n c\u1eeda s\u1ed5 tr\u1eddi - ID: 127651266 - Total: 8
+2025-09-19 14:54:42,902 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832816.htm: 165031 bytes
+2025-09-19 14:54:42,919 - app.utils.crawler - INFO - Extracted car ID 127832816: Vinfast Fadil 2020 1.4 AT - 44000 km, Price: 295000000, Year: 2020
+2025-09-19 14:54:42,919 - app.utils.crawler - INFO - Saved car ID: 127832816 to CSV. Total cars: 9
+2025-09-19 14:54:42,928 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Admin\\Desktop\\Data_Science\\app\\utils\\crawler.py', reloading
+2025-09-19 14:54:42,931 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 9
+2025-09-19 14:54:42,931 - app.utils.crawler - INFO - Saved car: Vinfast Fadil 2020 1.4 AT - 44000 km - ID: 127832816 - Total: 9
+2025-09-19 14:54:45,175 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127822017.htm: 162930 bytes
+2025-09-19 14:54:45,195 - app.utils.crawler - INFO - Extracted car ID 127822017: Ford Territory 2023 Titanium X 1.5 AT - 11000km, Price: 845000000, Year: 2023
+2025-09-19 14:54:45,195 - app.utils.crawler - INFO - Saved car ID: 127822017 to CSV. Total cars: 10
+2025-09-19 14:54:45,200 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 10
+2025-09-19 14:54:45,200 - app.utils.crawler - INFO - Saved car: Ford Territory 2023 Titanium X 1.5 AT - 11000km - ID: 127822017 - Total: 10
+2025-09-19 14:54:46,684 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832785.htm: 171400 bytes
+2025-09-19 14:54:46,701 - app.utils.crawler - INFO - Extracted car ID 127832785: Suzuki Super Carry Van 2014  - 12000 km, Price: 120000000, Year: 2014
+2025-09-19 14:54:46,702 - app.utils.crawler - INFO - Saved car ID: 127832785 to CSV. Total cars: 11
+2025-09-19 14:54:46,707 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 11
+2025-09-19 14:54:46,707 - app.utils.crawler - INFO - Saved car: Suzuki Super Carry Van 2014  - 12000 km - ID: 127832785 - Total: 11
+2025-09-19 14:54:49,207 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832774.htm: 185694 bytes
+2025-09-19 14:54:49,226 - app.utils.crawler - INFO - Extracted car ID 127832774: Toyota Innova 2018 2.0E, Price: 428000000, Year: 2018
+2025-09-19 14:54:49,227 - app.utils.crawler - INFO - Saved car ID: 127832774 to CSV. Total cars: 12
+2025-09-19 14:54:49,235 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 12
+2025-09-19 14:54:49,235 - app.utils.crawler - INFO - Saved car: Toyota Innova 2018 2.0E - ID: 127832774 - Total: 12
+2025-09-19 14:54:52,690 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/121455790.htm: 195156 bytes
+2025-09-19 14:54:52,710 - app.utils.crawler - INFO - Extracted car ID 121455790: Honda City 2017 1.5 CVT - 90.000 km, Price: 370000000, Year: 2017
+2025-09-19 14:54:52,710 - app.utils.crawler - INFO - Saved car ID: 121455790 to CSV. Total cars: 13
+2025-09-19 14:54:52,722 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 13
+2025-09-19 14:54:52,723 - app.utils.crawler - INFO - Saved car: Honda City 2017 1.5 CVT - 90.000 km - ID: 121455790 - Total: 13
+2025-09-19 14:54:54,562 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/123305391.htm: 156390 bytes
+2025-09-19 14:54:54,584 - app.utils.crawler - INFO - Extracted car ID 123305391: Honda CR V 2025, TR\u1ea2 359tr NH\u1eacN XE,GIAM TM T\u1eb6NG PK, Price: 1099000000, Year: 2025
+2025-09-19 14:54:54,584 - app.utils.crawler - INFO - Saved car ID: 123305391 to CSV. Total cars: 14
+2025-09-19 14:54:54,594 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 14
+2025-09-19 14:54:54,594 - app.utils.crawler - INFO - Saved car: Honda CR V 2025, TR\u1ea2 359tr NH\u1eacN XE,GIAM TM T\u1eb6NG PK - ID: 123305391 - Total: 14
+2025-09-19 14:54:56,261 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127739279.htm: 150119 bytes
+2025-09-19 14:54:56,276 - app.utils.crawler - INFO - Extracted car ID 127739279: Nhà bán  Mazda CX 5 2016 2.5 AT AWD b\u1ea3n full, 1ch\u1ee7, Price: 475000000, Year: 2016
+2025-09-19 14:54:56,276 - app.utils.crawler - INFO - Saved car ID: 127739279 to CSV. Total cars: 15
+2025-09-19 14:54:56,281 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 15
+2025-09-19 14:54:56,281 - app.utils.crawler - INFO - Saved car: Nhà bán  Mazda CX 5 2016 2.5 AT AWD b\u1ea3n full, 1ch\u1ee7 - ID: 127739279 - Total: 15
+2025-09-19 14:54:58,887 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127599532.htm: 172444 bytes
+2025-09-19 14:54:58,903 - app.utils.crawler - INFO - Extracted car ID 127599532: Mitsubishi Xpander 2023 t\u1ef1 \u0111\u1ed9ng pdemium - 60000 km, Price: 510000000, Year: 2023
+2025-09-19 14:54:58,904 - app.utils.crawler - INFO - Saved car ID: 127599532 to CSV. Total cars: 16
+2025-09-19 14:54:58,908 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 16
+2025-09-19 14:54:58,908 - app.utils.crawler - INFO - Saved car: Mitsubishi Xpander 2023 t\u1ef1 \u0111\u1ed9ng pdemium - 60000 km - ID: 127599532 - Total: 16
+2025-09-19 14:55:00,329 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127799180.htm: 167524 bytes
+2025-09-19 14:55:00,346 - app.utils.crawler - INFO - Extracted car ID 127799180: VinFast VF5 2024 S - 22000 km, Price: 439000000, Year: 2024
+2025-09-19 14:55:00,346 - app.utils.crawler - INFO - Saved car ID: 127799180 to CSV. Total cars: 17
+2025-09-19 14:55:00,357 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 17
+2025-09-19 14:55:00,357 - app.utils.crawler - INFO - Saved car: VinFast VF5 2024 S - 22000 km - ID: 127799180 - Total: 17
+2025-09-19 14:55:03,434 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127832698.htm: 185860 bytes
+2025-09-19 14:55:03,456 - app.utils.crawler - INFO - Extracted car ID 127832698: Mitsubishi Xpander 2021 1.5AT - 43000 km, Price: 485000000, Year: 2021
+2025-09-19 14:55:03,456 - app.utils.crawler - INFO - Saved car ID: 127832698 to CSV. Total cars: 18
+2025-09-19 14:55:03,466 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 18
+2025-09-19 14:55:03,466 - app.utils.crawler - INFO - Saved car: Mitsubishi Xpander 2021 1.5AT - 43000 km - ID: 127832698 - Total: 18
+2025-09-19 14:55:05,766 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127490201.htm: 187497 bytes
+2025-09-19 14:55:05,798 - app.utils.crawler - INFO - Extracted car ID 127490201: Lynk&Co 06 2025 - 1000 km, Price: 700000000, Year: 2025
+2025-09-19 14:55:05,798 - app.utils.crawler - INFO - Saved car ID: 127490201 to CSV. Total cars: 19
+2025-09-19 14:55:05,806 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 19
+2025-09-19 14:55:05,806 - app.utils.crawler - INFO - Saved car: Lynk&Co 06 2025 - 1000 km - ID: 127490201 - Total: 19
+2025-09-19 14:55:07,602 - app.utils.crawler - INFO - Response received from https://xe.chotot.com/mua-ban-oto/127774063.htm: 195353 bytes
+2025-09-19 14:55:07,623 - app.utils.crawler - INFO - Extracted car ID 127774063: Toyota Corolla Altis 2019 1.8G AT - Xe C\u0169 T\u1ea1i Hãng, Price: 500000000, Year: 2019
+2025-09-19 14:55:07,623 - app.utils.crawler - INFO - Saved car ID: 127774063 to CSV. Total cars: 20
+2025-09-19 14:55:07,629 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 20
+2025-09-19 14:55:07,629 - app.utils.crawler - INFO - Saved car: Toyota Corolla Altis 2019 1.8G AT - Xe C\u0169 T\u1ea1i Hãng - ID: 127774063 - Total: 20
+2025-09-19 14:55:07,636 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 20
+2025-09-19 14:55:08,639 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 20
+2025-09-19 14:55:08,640 - app.utils.crawler - INFO - Page 1: Crawled 20 cars
+2025-09-19 14:55:10,008 - app.utils.crawler - INFO - Successfully updated crawl log 20: records_count = 20
+2025-09-19 14:55:10,008 - app.utils.crawler - INFO - Crawl completed! Total cars: 20
+2025-09-19 14:55:10,008 - app.utils.crawler - INFO - CSV file closed
+2025-09-19 14:55:11,074 - werkzeug - INFO -  * Restarting with stat
+2025-09-19 14:55:15,506 - app - INFO - Application initialized
+2025-09-19 14:55:15,507 - app - INFO - Checking model files for car price prediction...
+2025-09-19 14:55:15,507 - app - INFO - Model files already exist, skipping creation
+2025-09-19 14:55:15,516 - werkzeug - WARNING -  * Debugger is active!
+2025-09-19 14:55:15,520 - werkzeug - INFO -  * Debugger PIN: 145-798-001
+2025-09-19 14:55:15,532 - app - INFO - First request processed
+2025-09-19 14:55:15,535 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:15] "GET /api/crawl-status/20 HTTP/1.1" 200 -
+2025-09-19 14:55:15,844 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:15] "GET /api/crawl-status/20 HTTP/1.1" 200 -
+2025-09-19 14:55:21,723 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:21] "GET / HTTP/1.1" 200 -
+2025-09-19 14:55:22,036 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:55:22,038 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:55:34,269 - app.utils.preprocessor - INFO - Starting preprocessing with absolute path: C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
+2025-09-19 14:55:34,270 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:34] "[32mPOST /preprocess HTTP/1.1[0m" 302 -
+2025-09-19 14:55:34,271 - app.utils.preprocessor - INFO - Input file size: 5686602 bytes
+2025-09-19 14:55:34,282 - app.utils.preprocessor - INFO - Updated processing log 12
+2025-09-19 14:55:34,283 - app.utils.preprocessor - INFO - Updated processing log 12
+2025-09-19 14:55:34,283 - app.utils.preprocessor - INFO - Input file size: 5686602 bytes
+2025-09-19 14:55:34,283 - app.utils.preprocessor - INFO - First 5 lines of input file:
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Line 1: id,title,brand,model,year,price,mileage,fuel_type,transmission,owners,origin,car_type,seats,doors,version,condition,location,post_time,crawl_time,drivetrain,engine_type,horse_power,torque,engine_capacity,fuel_consumption,air_bags,ground_clearance,weight,load_capacity
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Line 2: \u1ecf,Mercedes Benz E Class 2010 E250 - 80000 km,Mercedes Benz,E Class,2010,320000000,80000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,,Vi\u1ec7t Nam,Sedan,5,,,\u0110ã s\u1eed d\u1ee5ng,"Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng",\u0110\u0103ng 1 phút tr\u01b0\u1edbc,2025-05-13 12:45:11,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Line 3: 124407149,Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM,Kia,Sedona,2020,845000000,85689,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,--,,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i",\u0110\u0103ng 2 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Line 4: 121332884,Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch,Kia,Sorento,2016,455000000,100000,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i",\u0110\u0103ng 1 tháng tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Line 5: 124296461,Hyundai Santa Fe 2013 2.4L 4WD - 107000 km,Hyundai,Santa Fe,2013,485000000,107000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,1,Hàn Qu\u1ed1c,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh",\u0110\u0103ng 9 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:34,284 - app.utils.preprocessor - INFO - Loading data from C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
+2025-09-19 14:55:34,423 - app.utils.preprocessor - INFO - First 5 rows of DataFrame:
+2025-09-19 14:55:34,424 - app.utils.preprocessor - INFO - Row 0: {'id': '\u1ecf', 'title': 'Mercedes Benz E Class 2010 E250 - 80000 km', 'brand': 'Mercedes Benz', 'model': 'E Class', 'year': 2010.0, 'price': 320000000, 'mileage': 80000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Vi\u1ec7t Nam', 'car_type': 'Sedan', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng', 'post_time': '\u0110\u0103ng 1 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:11', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:34,424 - app.utils.preprocessor - INFO - Row 1: {'id': '124407149', 'title': 'Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM', 'brand': 'Kia', 'model': 'Sedona', 'year': 2020.0, 'price': 845000000, 'mileage': 85689.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': '--', 'seats': nan, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 2 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:34,424 - app.utils.preprocessor - INFO - Row 2: {'id': '121332884', 'title': 'Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch', 'brand': 'Kia', 'model': 'Sorento', 'year': 2016.0, 'price': 455000000, 'mileage': 100000.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 1 tháng tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:34,424 - app.utils.preprocessor - INFO - Row 3: {'id': '124296461', 'title': 'Hyundai Santa Fe 2013 2.4L 4WD - 107000 km', 'brand': 'Hyundai', 'model': 'Santa Fe', 'year': 2013.0, 'price': 485000000, 'mileage': 107000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': 1.0, 'origin': 'Hàn Qu\u1ed1c', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 9 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:34,424 - app.utils.preprocessor - INFO - Row 4: {'id': '124942994', 'title': 'HONDA HRV G 2024 - S\u01a1n ZIN - Odo 3.700km - M\u1edaI KEN', 'brand': 'Honda', 'model': 'HR-V', 'year': 2024.0, 'price': 690000000, 'mileage': 3700.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Thái Lan', 'car_type': 'SUV / Cross over', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng Tân Phong, Qu\u1eadn 7, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 4 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:13', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:34,425 - app.utils.preprocessor - INFO - Initial data: 19929 rows, 29 columns
+2025-09-19 14:55:34,425 - app.utils.preprocessor - INFO - DataFrame columns: ['id', 'title', 'brand', 'model', 'year', 'price', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'doors', 'version', 'condition', 'location', 'post_time', 'crawl_time', 'drivetrain', 'engine_type', 'horse_power', 'torque', 'engine_capacity', 'fuel_consumption', 'air_bags', 'ground_clearance', 'weight', 'load_capacity']
+2025-09-19 14:55:34,431 - app.utils.preprocessor - INFO - Data after column selection: 19929 rows, 12 columns
+2025-09-19 14:55:34,432 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'condition', 'price']
+2025-09-19 14:55:34,432 - app.utils.preprocessor - INFO - Missing values count:
+2025-09-19 14:55:34,432 - app.utils.preprocessor - INFO -   brand: 0
+2025-09-19 14:55:34,433 - app.utils.preprocessor - INFO -   model: 0
+2025-09-19 14:55:34,433 - app.utils.preprocessor - INFO -   year: 20
+2025-09-19 14:55:34,433 - app.utils.preprocessor - INFO -   mileage: 1781
+2025-09-19 14:55:34,434 - app.utils.preprocessor - INFO -   fuel_type: 0
+2025-09-19 14:55:34,435 - app.utils.preprocessor - INFO -   transmission: 0
+2025-09-19 14:55:34,435 - app.utils.preprocessor - INFO -   owners: 11114
+2025-09-19 14:55:34,435 - app.utils.preprocessor - INFO -   origin: 0
+2025-09-19 14:55:34,436 - app.utils.preprocessor - INFO -   car_type: 8
+2025-09-19 14:55:34,436 - app.utils.preprocessor - INFO -   seats: 2138
+2025-09-19 14:55:34,437 - app.utils.preprocessor - INFO -   condition: 0
+2025-09-19 14:55:34,437 - app.utils.preprocessor - INFO -   price: 0
+2025-09-19 14:55:34,440 - app.utils.preprocessor - INFO - Filtered by year >= 2000: Removed 263 rows
+2025-09-19 14:55:34,443 - app.utils.preprocessor - INFO - Filtered origin != '\u0110ang c\u1eadp nh\u1eadt': Removed 2110 rows
+2025-09-19 14:55:34,445 - app.utils.preprocessor - INFO - Filtered car_type != '--': Removed 1868 rows
+2025-09-19 14:55:34,447 - app.utils.preprocessor - INFO - Dropped 'owners' column
+2025-09-19 14:55:34,450 - app.utils.preprocessor - INFO - Rows with at least one null value: 1896
+2025-09-19 14:55:34,454 - app.utils.preprocessor - INFO - After dropping null rows: 13792 rows left
+2025-09-19 14:55:34,460 - app.utils.preprocessor - INFO - Duplicate rows: 1021
+2025-09-19 14:55:34,466 - app.utils.preprocessor - INFO - After dropping duplicates: 12771 rows left
+2025-09-19 14:55:34,469 - app.utils.preprocessor - INFO - Filtered brand with few samples: Removed 100 rows
+2025-09-19 14:55:34,472 - app.utils.preprocessor - INFO - Filtered model with few samples: Removed 536 rows
+2025-09-19 14:55:34,474 - app.utils.preprocessor - INFO - Filtered transmission with few samples: Removed 5 rows
+2025-09-19 14:55:34,479 - app.utils.preprocessor - INFO - Filtered car_type with few samples: Removed 7 rows
+2025-09-19 14:55:34,479 - app.utils.preprocessor - INFO - After iteration 1: 12123 rows left
+2025-09-19 14:55:34,487 - app.utils.preprocessor - INFO - After iteration 2: 12123 rows left
+2025-09-19 14:55:34,489 - app.utils.preprocessor - INFO - Dropped 'condition' column - only has one value
+2025-09-19 14:55:34,489 - app.utils.preprocessor - INFO - Initial price range: 5,000,000 - 20,000,000,000 VND
+2025-09-19 14:55:34,490 - app.utils.preprocessor - INFO - Removing 22 cars with price > 5 billion VND
+2025-09-19 14:55:34,491 - app.utils.preprocessor - INFO - Removing 534 cars with price < 100 million VND
+2025-09-19 14:55:34,493 - app.utils.preprocessor - INFO - Updated price range: 102,000,000 - 4,999,000,000 VND
+2025-09-19 14:55:34,493 - app.utils.preprocessor - INFO - Final data statistics:
+2025-09-19 14:55:34,495 - app.utils.preprocessor - INFO - Rows with any null value: 0
+2025-09-19 14:55:34,499 - app.utils.preprocessor - INFO - Duplicate rows: 0
+2025-09-19 14:55:34,499 - app.utils.preprocessor - INFO - Final data: 11547 rows, 10 columns
+2025-09-19 14:55:34,499 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'origin', 'car_type', 'seats', 'price']
+2025-09-19 14:55:34,548 - app.utils.preprocessor - INFO - Preprocessed data saved to data\processed\processed_cars_20250919_145534.csv
+2025-09-19 14:55:34,554 - app.utils.preprocessor - INFO - Updated processing log 12
+2025-09-19 14:55:34,555 - app.utils.preprocessor - INFO - Preprocessing completed with result: True
+2025-09-19 14:55:34,571 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:34] "GET / HTTP/1.1" 200 -
+2025-09-19 14:55:34,896 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:55:34,897 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:55:38,163 - app.utils.preprocessor - INFO - Starting preprocessing with absolute path: C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
+2025-09-19 14:55:38,164 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:38] "[32mPOST /preprocess HTTP/1.1[0m" 302 -
+2025-09-19 14:55:38,165 - app.utils.preprocessor - INFO - Input file size: 5686602 bytes
+2025-09-19 14:55:38,172 - app.utils.preprocessor - INFO - Updated processing log 13
+2025-09-19 14:55:38,174 - app.utils.preprocessor - INFO - Updated processing log 13
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Input file size: 5686602 bytes
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - First 5 lines of input file:
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Line 1: id,title,brand,model,year,price,mileage,fuel_type,transmission,owners,origin,car_type,seats,doors,version,condition,location,post_time,crawl_time,drivetrain,engine_type,horse_power,torque,engine_capacity,fuel_consumption,air_bags,ground_clearance,weight,load_capacity
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Line 2: \u1ecf,Mercedes Benz E Class 2010 E250 - 80000 km,Mercedes Benz,E Class,2010,320000000,80000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,,Vi\u1ec7t Nam,Sedan,5,,,\u0110ã s\u1eed d\u1ee5ng,"Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng",\u0110\u0103ng 1 phút tr\u01b0\u1edbc,2025-05-13 12:45:11,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Line 3: 124407149,Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM,Kia,Sedona,2020,845000000,85689,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,--,,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i",\u0110\u0103ng 2 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Line 4: 121332884,Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch,Kia,Sorento,2016,455000000,100000,D\u1ea7u,T\u1ef1 \u0111\u1ed9ng,,\u0110ang c\u1eadp nh\u1eadt,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i",\u0110\u0103ng 1 tháng tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Line 5: 124296461,Hyundai Santa Fe 2013 2.4L 4WD - 107000 km,Hyundai,Santa Fe,2013,485000000,107000,X\u0103ng,T\u1ef1 \u0111\u1ed9ng,1,Hàn Qu\u1ed1c,SUV / Cross over,7,,,\u0110ã s\u1eed d\u1ee5ng,"Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh",\u0110\u0103ng 9 phút tr\u01b0\u1edbc,2025-05-13 12:45:12,,,,,,,,,> 1 t\u1ea5n,> 2 t\u1ea5n
+2025-09-19 14:55:38,175 - app.utils.preprocessor - INFO - Loading data from C:\Users\admin\Desktop\Data_Science\data\raw\raw.csv
+2025-09-19 14:55:38,311 - app.utils.preprocessor - INFO - First 5 rows of DataFrame:
+2025-09-19 14:55:38,311 - app.utils.preprocessor - INFO - Row 0: {'id': '\u1ecf', 'title': 'Mercedes Benz E Class 2010 E250 - 80000 km', 'brand': 'Mercedes Benz', 'model': 'E Class', 'year': 2010.0, 'price': 320000000, 'mileage': 80000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Vi\u1ec7t Nam', 'car_type': 'Sedan', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Xã Hi\u1ec7p An, Th\u1ecb xã Kinh Môn, H\u1ea3i D\u01b0\u01a1ng', 'post_time': '\u0110\u0103ng 1 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:11', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:38,311 - app.utils.preprocessor - INFO - Row 1: {'id': '124407149', 'title': 'Kia Sedona 2020  2.2 DATH full d\u1ea7u xe r\u1ea5t m\u1edbi HI\u1ebeM', 'brand': 'Kia', 'model': 'Sedona', 'year': 2020.0, 'price': 845000000, 'mileage': 85689.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': '--', 'seats': nan, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng H\u1ea1 \u0110ình, Qu\u1eadn Thanh Xuân, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 2 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:38,312 - app.utils.preprocessor - INFO - Row 2: {'id': '121332884', 'title': 'Kia Sorento GATH 2016 AT2.4 Full k\u1ecbch', 'brand': 'Kia', 'model': 'Sorento', 'year': 2016.0, 'price': 455000000, 'mileage': 100000.0, 'fuel_type': 'D\u1ea7u', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': '\u0110ang c\u1eadp nh\u1eadt', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Th\u1ecb tr\u1ea5n \u0110ông Anh, Huy\u1ec7n \u0110ông Anh, Hà N\u1ed9i', 'post_time': '\u0110\u0103ng 1 tháng tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:38,312 - app.utils.preprocessor - INFO - Row 3: {'id': '124296461', 'title': 'Hyundai Santa Fe 2013 2.4L 4WD - 107000 km', 'brand': 'Hyundai', 'model': 'Santa Fe', 'year': 2013.0, 'price': 485000000, 'mileage': 107000.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': 1.0, 'origin': 'Hàn Qu\u1ed1c', 'car_type': 'SUV / Cross over', 'seats': 7.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng 2, Qu\u1eadn Tân Bình, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 9 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:12', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:38,312 - app.utils.preprocessor - INFO - Row 4: {'id': '124942994', 'title': 'HONDA HRV G 2024 - S\u01a1n ZIN - Odo 3.700km - M\u1edaI KEN', 'brand': 'Honda', 'model': 'HR-V', 'year': 2024.0, 'price': 690000000, 'mileage': 3700.0, 'fuel_type': 'X\u0103ng', 'transmission': 'T\u1ef1 \u0111\u1ed9ng', 'owners': nan, 'origin': 'Thái Lan', 'car_type': 'SUV / Cross over', 'seats': 5.0, 'doors': nan, 'version': nan, 'condition': '\u0110ã s\u1eed d\u1ee5ng', 'location': 'Ph\u01b0\u1eddng Tân Phong, Qu\u1eadn 7, Tp H\u1ed3 Chí Minh', 'post_time': '\u0110\u0103ng 4 phút tr\u01b0\u1edbc', 'crawl_time': '2025-05-13 12:45:13', 'drivetrain': nan, 'engine_type': nan, 'horse_power': nan, 'torque': nan, 'engine_capacity': nan, 'fuel_consumption': nan, 'air_bags': nan, 'ground_clearance': nan, 'weight': '> 1 t\u1ea5n', 'load_capacity': '> 2 t\u1ea5n'}
+2025-09-19 14:55:38,312 - app.utils.preprocessor - INFO - Initial data: 19929 rows, 29 columns
+2025-09-19 14:55:38,312 - app.utils.preprocessor - INFO - DataFrame columns: ['id', 'title', 'brand', 'model', 'year', 'price', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'doors', 'version', 'condition', 'location', 'post_time', 'crawl_time', 'drivetrain', 'engine_type', 'horse_power', 'torque', 'engine_capacity', 'fuel_consumption', 'air_bags', 'ground_clearance', 'weight', 'load_capacity']
+2025-09-19 14:55:38,319 - app.utils.preprocessor - INFO - Data after column selection: 19929 rows, 12 columns
+2025-09-19 14:55:38,319 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'owners', 'origin', 'car_type', 'seats', 'condition', 'price']
+2025-09-19 14:55:38,319 - app.utils.preprocessor - INFO - Missing values count:
+2025-09-19 14:55:38,320 - app.utils.preprocessor - INFO -   brand: 0
+2025-09-19 14:55:38,320 - app.utils.preprocessor - INFO -   model: 0
+2025-09-19 14:55:38,321 - app.utils.preprocessor - INFO -   year: 20
+2025-09-19 14:55:38,321 - app.utils.preprocessor - INFO -   mileage: 1781
+2025-09-19 14:55:38,321 - app.utils.preprocessor - INFO -   fuel_type: 0
+2025-09-19 14:55:38,322 - app.utils.preprocessor - INFO -   transmission: 0
+2025-09-19 14:55:38,322 - app.utils.preprocessor - INFO -   owners: 11114
+2025-09-19 14:55:38,323 - app.utils.preprocessor - INFO -   origin: 0
+2025-09-19 14:55:38,324 - app.utils.preprocessor - INFO -   car_type: 8
+2025-09-19 14:55:38,324 - app.utils.preprocessor - INFO -   seats: 2138
+2025-09-19 14:55:38,324 - app.utils.preprocessor - INFO -   condition: 0
+2025-09-19 14:55:38,325 - app.utils.preprocessor - INFO -   price: 0
+2025-09-19 14:55:38,327 - app.utils.preprocessor - INFO - Filtered by year >= 2000: Removed 263 rows
+2025-09-19 14:55:38,330 - app.utils.preprocessor - INFO - Filtered origin != '\u0110ang c\u1eadp nh\u1eadt': Removed 2110 rows
+2025-09-19 14:55:38,333 - app.utils.preprocessor - INFO - Filtered car_type != '--': Removed 1868 rows
+2025-09-19 14:55:38,335 - app.utils.preprocessor - INFO - Dropped 'owners' column
+2025-09-19 14:55:38,338 - app.utils.preprocessor - INFO - Rows with at least one null value: 1896
+2025-09-19 14:55:38,343 - app.utils.preprocessor - INFO - After dropping null rows: 13792 rows left
+2025-09-19 14:55:38,349 - app.utils.preprocessor - INFO - Duplicate rows: 1021
+2025-09-19 14:55:38,355 - app.utils.preprocessor - INFO - After dropping duplicates: 12771 rows left
+2025-09-19 14:55:38,358 - app.utils.preprocessor - INFO - Filtered brand with few samples: Removed 100 rows
+2025-09-19 14:55:38,360 - app.utils.preprocessor - INFO - Filtered model with few samples: Removed 536 rows
+2025-09-19 14:55:38,363 - app.utils.preprocessor - INFO - Filtered transmission with few samples: Removed 5 rows
+2025-09-19 14:55:38,367 - app.utils.preprocessor - INFO - Filtered car_type with few samples: Removed 7 rows
+2025-09-19 14:55:38,367 - app.utils.preprocessor - INFO - After iteration 1: 12123 rows left
+2025-09-19 14:55:38,375 - app.utils.preprocessor - INFO - After iteration 2: 12123 rows left
+2025-09-19 14:55:38,377 - app.utils.preprocessor - INFO - Dropped 'condition' column - only has one value
+2025-09-19 14:55:38,377 - app.utils.preprocessor - INFO - Initial price range: 5,000,000 - 20,000,000,000 VND
+2025-09-19 14:55:38,378 - app.utils.preprocessor - INFO - Removing 22 cars with price > 5 billion VND
+2025-09-19 14:55:38,379 - app.utils.preprocessor - INFO - Removing 534 cars with price < 100 million VND
+2025-09-19 14:55:38,380 - app.utils.preprocessor - INFO - Updated price range: 102,000,000 - 4,999,000,000 VND
+2025-09-19 14:55:38,380 - app.utils.preprocessor - INFO - Final data statistics:
+2025-09-19 14:55:38,383 - app.utils.preprocessor - INFO - Rows with any null value: 0
+2025-09-19 14:55:38,387 - app.utils.preprocessor - INFO - Duplicate rows: 0
+2025-09-19 14:55:38,387 - app.utils.preprocessor - INFO - Final data: 11547 rows, 10 columns
+2025-09-19 14:55:38,387 - app.utils.preprocessor - INFO - Columns: ['brand', 'model', 'year', 'mileage', 'fuel_type', 'transmission', 'origin', 'car_type', 'seats', 'price']
+2025-09-19 14:55:38,438 - app.utils.preprocessor - INFO - Preprocessed data saved to data\processed\processed_cars_20250919_145538.csv
+2025-09-19 14:55:38,443 - app.utils.preprocessor - INFO - Updated processing log 13
+2025-09-19 14:55:38,443 - app.utils.preprocessor - INFO - Preprocessing completed with result: True
+2025-09-19 14:55:38,462 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:38] "GET / HTTP/1.1" 200 -
+2025-09-19 14:55:38,788 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:55:38,789 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:55:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:56:14,603 - app - INFO - Starting import at 2025-09-19 14:56:14.603498
+2025-09-19 14:56:14,604 - app.utils.database - INFO - Importing data from data\processed\processed_cars_20250919_145538.csv
+2025-09-19 14:56:14,604 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:14] "[32mPOST /import-to-db HTTP/1.1[0m" 302 -
+2025-09-19 14:56:14,640 - app.utils.database - INFO - Loaded 11547 rows from data\processed\processed_cars_20250919_145538.csv
+2025-09-19 14:56:14,642 - app.utils.database - INFO - Found 25 unique brands
+2025-09-19 14:56:14,656 - app.utils.database - INFO - Found 175 unique brand-model combinations
+2025-09-19 14:56:14,840 - app.utils.database - INFO - Found 398 unique model-type combinations
+2025-09-19 14:56:14,925 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:14] "GET / HTTP/1.1" 200 -
+2025-09-19 14:56:15,241 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:56:15,243 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:56:15,416 - app.utils.database - INFO - Found 4 unique fuel types
+2025-09-19 14:56:15,420 - app.utils.database - INFO - Found 4 unique transmission types
+2025-09-19 14:56:15,423 - app.utils.database - INFO - Found 26 unique years
+2025-09-19 14:56:15,432 - app.utils.database - INFO - Found 10 unique seat counts
+2025-09-19 14:56:15,438 - app.utils.database - INFO - Found 10 unique origins
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Import completed successfully!
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Brands: 25
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Models: 177
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Car Types: 402
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Fuel Types: 4
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Transmissions: 4
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Years: 26
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Seats: 10
+2025-09-19 14:56:15,449 - app.utils.database - INFO - Origins: 10
+2025-09-19 14:56:15,450 - app - INFO - Successfully imported data from data\processed\processed_cars_20250919_145538.csv in 0.85 seconds
+2025-09-19 14:56:28,144 - app - INFO - \u0110ã backup cleaned.csv thành C:\Users\Admin\Desktop\Data_Science\data\preprocessing\cleaned_backup_20250919_145628.csv
+2025-09-19 14:56:28,147 - app - INFO - \u0110ã c\u1eadp nh\u1eadt cleaned.csv t\u1eeb C:\Users\Admin\Desktop\Data_Science\data\processed\processed_cars_20250919_145538.csv
+2025-09-19 14:56:28,149 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:28] "[32mPOST /train-models HTTP/1.1[0m" 302 -
+2025-09-19 14:56:28,466 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:28] "GET / HTTP/1.1" 200 -
+2025-09-19 14:56:28,646 - app - INFO - \u0110ào t\u1ea1o Linear Regression...
+2025-09-19 14:56:28,960 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-09-19 14:56:28,962 - werkzeug - INFO - 127.0.0.1 - - [19/Sep/2025 14:56:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-09-19 14:56:28,983 - app - INFO - \u0110ào t\u1ea1o Random Forest...
+2025-09-19 14:56:37,572 - app - INFO - \u0110ào t\u1ea1o XGBoost...
+2025-09-19 14:56:40,778 - app - INFO - \u2705 Hoàn t\u1ea5t \u0111ào t\u1ea1o mô hình!
