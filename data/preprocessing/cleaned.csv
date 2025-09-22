@@ -1387,6 +1387,7 @@ VinFast,VF3,2024.0,30.0,Điện,Tự động,Việt Nam,SUV / Cross over,4.0,232
 Peugeot,2008,2022.0,45000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,655000000
 Mitsubishi,Xpander,2018.0,7500.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,465000000
 Ford,Everest,2020.0,65000.0,Dầu,Tự động,Thái Lan,SUV / Cross over,7.0,975000000
+Hyundai,Genesis,2010.0,245241.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,328000000
 Mercedes Benz,Sprinter,2009.0,999.0,Dầu,Số sàn,Việt Nam,Van,7.0,185000000
 Kia,Seltos,2021.0,37000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,545000000
 Toyota,Vios,2018.0,86000.0,Xăng,Số sàn,Việt Nam,Sedan,5.0,320000000
@@ -5487,6 +5488,7 @@ Mazda,3,2019.0,70000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,448000000
 Hyundai,Grand Starex,2013.0,180000.0,Dầu,Số sàn,Hàn Quốc,Minivan (MPV),9.0,460000000
 Toyota,Vios,2023.0,68000.0,Xăng,Số sàn,Việt Nam,Sedan,5.0,389000000
 Ford,Fiesta,2011.0,920000.0,Xăng,Tự động,Việt Nam,Hatchback,5.0,179000000
+Hyundai,Genesis,2016.0,90000.0,Xăng,Tự động,Hàn Quốc,Sedan,5.0,750000000
 Nissan,X trail,2008.0,14000.0,Xăng,Tự động,Nhật Bản,Hatchback,5.0,275000000
 Kia,K3,2022.0,43000.0,Xăng,Tự động,Việt Nam,Sedan,4.0,520000000
 Mazda,3,2021.0,19000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,575000000
@@ -5723,6 +5725,7 @@ Toyota,Vios,2012.0,75100.0,Xăng,Tự động,Việt Nam,Sedan,5.0,235000000
 Toyota,Vios,2014.0,120000.0,Xăng,Số sàn,Nhật Bản,Sedan,5.0,235000000
 Honda,City,2018.0,39000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,370000000
 Ford,Everest,2021.0,116000.0,Dầu,Tự động,Thái Lan,SUV / Cross over,7.0,875000000
+Hyundai,Genesis,2013.0,98000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),4.0,440000000
 Toyota,Innova,2008.0,220000.0,Xăng,Số sàn,Việt Nam,Minivan (MPV),8.0,190000000
 Mercedes Benz,GLC,2021.0,0.0,Xăng,Tự động,Nước khác,SUV / Cross over,5.0,1690000000
 Mazda,BT 50,2019.0,68000.0,Dầu,Tự động,Thái Lan,Pick-up (bán tải),5.0,465000000
@@ -6093,6 +6096,7 @@ Kia,Picanto,2013.0,279000.0,Xăng,Số sàn,Việt Nam,Hatchback,5.0,140000000
 Suzuki,XL 7,2022.0,36000.0,Xăng,Tự động,Nước khác,Minivan (MPV),7.0,495000000
 Ford,Everest,2024.0,5100.0,Dầu,Tự động,Thái Lan,SUV / Cross over,7.0,1160000000
 Kia,Sedona,2019.0,12000.0,Dầu,Tự động,Việt Nam,Minivan (MPV),7.0,786000000
+Hyundai,Genesis,2009.0,123.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),4.0,325000000
 Toyota,Yaris,2011.0,123000.0,Xăng,Tự động,Thái Lan,Hatchback,5.0,269000000
 Mitsubishi,Xpander,2022.0,80000.0,Xăng,Tự động,Nước khác,Minivan (MPV),7.0,460000000
 Hyundai,Accent,2011.0,150.0,Xăng,Số sàn,Hàn Quốc,Sedan,5.0,215000000
@@ -8112,6 +8116,7 @@ Mercedes Benz,GLC Class,2023.0,22000.0,Xăng,Tự động,Việt Nam,SUV / Cross
 Toyota,Innova,2016.0,116000.0,Xăng,Số sàn,Việt Nam,Minivan (MPV),8.0,383000000
 VinFast,Fadil,2020.0,22500.0,Xăng,Tự động,Việt Nam,Hatchback,5.0,265000000
 Kia,Morning,2010.0,20000.0,Xăng,Tự động,Hàn Quốc,Hatchback,2.0,110000000
+Hyundai,Genesis,2010.0,130000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,298000000
 Ford,Ranger,2021.0,34000.0,Dầu,Tự động,Thái Lan,Pick-up (bán tải),5.0,980000000
 Daewoo,Lacetti,2009.0,180000.0,Xăng,Số sàn,Hàn Quốc,Sedan,5.0,115000000
 BMW,X6,2009.0,120000.0,Xăng,Tự động,Đức,SUV / Cross over,4.0,330000000
@@ -8635,6 +8640,7 @@ Hyundai,Creta,2023.0,16000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,
 Kia,Sorento,2022.0,52000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,6.0,938000000
 VinFast,VFe34,2022.0,31000.0,Điện,Tự động,Việt Nam,Hatchback,5.0,495000000
 Kia,Carnival,2022.0,40000.0,Dầu,Tự động,Việt Nam,Minivan (MPV),7.0,1250000000
+Hyundai,Genesis,2009.0,91356.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,369000000
 Toyota,Yaris Cross,2024.0,22000.0,Xăng,Tự động,Nước khác,Hatchback,5.0,655000000
 Toyota,Corolla Cross,2021.0,22000.0,Xăng,5,Thái Lan,SUV / Cross over,5.0,728000000
 Ford,Ranger,2019.0,60000.0,Dầu,Số sàn,Thái Lan,Pick-up (bán tải),5.0,455000000
@@ -9871,6 +9877,7 @@ Honda,CR V,2009.0,16000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,295
 Kia,Rio,2016.0,120000.0,Xăng,Số sàn,Hàn Quốc,Sedan,5.0,240000000
 Chevrolet,Colorado,2017.0,99999.0,Dầu,Số sàn,Thái Lan,Pick-up (bán tải),5.0,335000000
 Kia,Seltos,2022.0,34000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,639000000
+Hyundai,Genesis,2010.0,110000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,310000000
 Toyota,Hiace,2006.0,123.0,Xăng,Số sàn,Việt Nam,Van,16.0,145000000
 Hyundai,Elantra,2019.0,75000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,439000000
 Kia,Sedona,2020.0,48000.0,Dầu,Tự động,Việt Nam,Minivan (MPV),7.0,915000000
@@ -10389,6 +10396,7 @@ Mazda,3,2016.0,92000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,365000000
 Hyundai,Kona,2019.0,70000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,485000000
 Kia,Rio,2015.0,100000.0,Xăng,Số sàn,Hàn Quốc,Sedan,5.0,220000000
 Mazda,CX 5,2017.0,85000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,525000000
+Hyundai,Genesis,2010.0,79000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,900000000
 Toyota,Vios,2019.0,68000.0,Xăng,Số sàn,Việt Nam,Sedan,5.0,318000000
 Mazda,CX 5,2015.0,100000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,445000000
 Kia,Morning,2011.0,40000.0,Xăng,Số sàn,Hàn Quốc,Hatchback,5.0,115000000
@@ -10826,6 +10834,7 @@ Toyota,Vios,2024.0,55900.0,Xăng,Số sàn,Việt Nam,Sedan,5.0,410000000
 Toyota,Vios,2023.0,17000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,455000000
 Mazda,CX 5,2023.0,9000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,798000000
 Ford,Transit,2006.0,30000.0,Dầu,Số sàn,Việt Nam,Van,6.0,120000000
+Hyundai,Genesis,2011.0,60000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),4.0,410000000
 Hyundai,Santa Fe,2023.0,12000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,1135000000
 Ford,Ranger,2021.0,54000.0,Dầu,Số sàn,Thái Lan,Pick-up (bán tải),5.0,485000000
 Kia,K3,2016.0,60000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,375000000
@@ -11546,3 +11555,55 @@ Toyota,Fortuner,2014.0,176000.0,Xăng,Tự động,Nhật Bản,SUV / Cross over
 Nissan,Sunny,2017.0,99000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,269000000
 Volkswagen,Polo,2021.0,12000.0,Xăng,Tự động,Ấn Độ,Hatchback,5.0,449000000
 Kia,Carens,2011.0,155000.0,Xăng,Tự động,Hàn Quốc,Minivan (MPV),7.0,225000000
+Toyota,Zace,2004.0,180000.0,Xăng,Số sàn,Việt Nam,SUV / Cross over,8.0,145000000
+Toyota,Innova,2019.0,103000.0,Xăng,Số sàn,Việt Nam,Minivan (MPV),8.0,470000000
+Mitsubishi,Xpander Cross,2022.0,87000.0,Xăng,Tự động,Nước khác,SUV / Cross over,7.0,549000000
+Suzuki,Ertiga,2020.0,100000.0,Xăng,Số sàn,Nước khác,SUV / Cross over,7.0,340000000
+Hyundai,Elantra,2018.0,77533.0,Xăng,Tự động,Việt Nam,Sedan,5.0,410000000
+Mitsubishi,Xpander,2024.0,35000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,609000000
+Hyundai,i30,2009.0,112000.0,Xăng,Tự động,Hàn Quốc,Hatchback,5.0,245000000
+Kia,Cerato,2019.0,35000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,435000000
+Mazda,2,2013.0,120000.0,Xăng,Tự động,Thái Lan,Hatchback,5.0,225000000
+Toyota,Vios,2017.0,100000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,315000000
+Hyundai,Santa Fe,2017.0,136000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,610000000
+VinFast,Fadil,2022.0,0.0,Xăng,Tự động,Việt Nam,Sedan,5.0,279000000
+Toyota,Innova,2015.0,21000.0,Xăng,Số sàn,Việt Nam,Kiểu dáng khác,8.0,288888888
+Ford,Territory,2023.0,45000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,779000000
+Mitsubishi,Xpander,2022.0,77000.0,Xăng,Tự động,Nhật Bản,Minivan (MPV),9.0,529000000
+Ford,Ranger,2014.0,150000.0,Dầu,Tự động,Thái Lan,Pick-up (bán tải),5.0,345000000
+Ford,Ranger,2023.0,35000.0,Dầu,Tự động,Thái Lan,Pick-up (bán tải),5.0,1265000000
+Ford,Everest,2019.0,102000.0,Dầu,Tự động,Thái Lan,SUV / Cross over,7.0,728000000
+Kia,Forte,2011.0,93000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,249000000
+Toyota,Corolla Altis,2022.0,5000.0,Xăng,Tự động,Thái Lan,Sedan,2.0,600000000
+Nissan,Sunny,2017.0,52000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,288000000
+Hyundai,Accent,2012.0,112.0,Xăng,Tự động,Hàn Quốc,Sedan,5.0,255000000
+Ford,Everest,2022.0,35000.0,Dầu,Tự động,Việt Nam,SUV / Cross over,7.0,1265000000
+Toyota,Fortuner,2015.0,136000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,449000000
+Toyota,Innova,2008.0,180000.0,Xăng,Số sàn,Nhật Bản,Minivan (MPV),8.0,198000000
+Mitsubishi,Xpander,2024.0,8000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,616000000
+Ford,EcoSport,2016.0,72000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,295000000
+Mercedes Benz,C Class,2018.0,100000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,650000000
+Toyota,Camry,2020.0,32000.0,Xăng,Tự động,Thái Lan,Sedan,5.0,930000000
+Toyota,Fortuner,2019.0,93000.0,Xăng,Tự động,Nước khác,SUV / Cross over,7.0,735000000
+Kia,Seltos,2021.0,67000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,5.0,568000000
+Toyota,Fortuner,2018.0,41000.0,Xăng,Tự động,Nước khác,SUV / Cross over,7.0,695000000
+Toyota,Fortuner,2015.0,77000.0,Xăng,Tự động,Việt Nam,SUV / Cross over,7.0,492000000
+Mitsubishi,Xforce,2024.0,3000.0,Xăng,Tự động,Nước khác,SUV / Cross over,5.0,630000000
+Toyota,Fortuner,2017.0,66000.0,Dầu,Số sàn,Nước khác,SUV / Cross over,7.0,670000000
+Audi,Q7,2019.0,43000.0,Xăng,Tự động,Đức,SUV / Cross over,7.0,2050000000
+Mitsubishi,Xpander,2019.0,116000.0,Xăng,Tự động,Nước khác,Minivan (MPV),5.0,425000000
+Ford,Everest,2023.0,20000.0,Dầu,Tự động,Thái Lan,SUV / Cross over,7.0,1369000000
+Toyota,Fortuner,2018.0,68000.0,Xăng,Tự động,Nước khác,SUV / Cross over,7.0,699000000
+Hyundai,Grand Starex,2013.0,180000.0,Xăng,Số sàn,Hàn Quốc,Van,6.0,315000000
+Mercedes Benz,S Class,2018.0,94000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,1999000000
+Kia,Carnival,2025.0,4000.0,Dầu,Tự động,Việt Nam,Van,7.0,1650000000
+Ford,Ranger,2023.0,27000.0,Dầu,Tự động,Việt Nam,Pick-up (bán tải),5.0,619000000
+Mitsubishi,Xpander Cross,2022.0,57000.0,Xăng,Tự động,Nước khác,Minivan (MPV),7.0,545000000
+Peugeot,5008,2018.0,89000.0,Xăng,Tự động,Việt Nam,Minivan (MPV),7.0,580000000
+Hyundai,Genesis,2010.0,85000.0,Xăng,Tự động,Hàn Quốc,Coupe (2 cửa),5.0,315000000
+Mitsubishi,Xpander,2024.0,23400.0,Xăng,Tự động,Nước khác,SUV / Cross over,7.0,585000000
+Mazda,3,2020.0,85000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,495000000
+Honda,City,2022.0,60000.0,Xăng,Tự động,Việt Nam,Sedan,5.0,468000000
+Kia,Sedona,2017.0,90000.0,Dầu,Tự động,Việt Nam,Minivan (MPV),7.0,620000000
+Toyota,Fortuner,2019.0,90000.0,Dầu,Số sàn,Việt Nam,SUV / Cross over,7.0,735000000
+VinFast,VF3,2025.0,6000.0,Điện,Tự động,Việt Nam,Coupe (2 cửa),4.0,238000000
