@@ -29,6 +29,35 @@ class CarDataPreprocessor:
         
         # Update processing log with output file
         self.update_processing_log(output_file=self.output_file)
+
+# class CarDataPreprocessor:
+#     """Class for preprocessing car data."""
+    
+#     def __init__(self, input_file, log_id=None):
+#         """Initialize the preprocessor with input file path and log ID."""
+#         self.input_file = input_file
+#         self.log_id = log_id
+
+#         # Luôn lưu ra file cleaned.csv trong thư mục preprocessing
+#         self.output_file = os.path.join('data', 'preprocessing', 'cleaned.csv')
+        
+#         # Đảm bảo thư mục preprocessing tồn tại
+#         os.makedirs(os.path.dirname(self.output_file), exist_ok=True)
+        
+#         # Cập nhật log
+#         self.update_processing_log(output_file=self.output_file)
+
+#     def save_output(self, df: pd.DataFrame):
+#         """Save processed data to cleaned.csv (append if exists)."""
+#         file_exists = os.path.exists(self.output_file)
+
+#         df.to_csv(
+#             self.output_file,
+#             mode='a',               # append mode
+#             index=False,
+#             header=not file_exists, # ghi header chỉ khi file chưa tồn tại
+#             encoding='utf-8-sig'
+#         )
     
     def update_processing_log(self, status=None, records_count=None, error_message=None, output_file=None, end_time=None):
         """Update the processing log in the database."""

@@ -168,6 +168,7 @@ def preprocess():
     return redirect(url_for('main.index'))
 
 @main_bp.route('/import-to-db', methods=['POST'])
+# import từ file processed
 def import_to_db():
     """Import processed data to database."""
     file_path = request.form.get('file_path')
@@ -216,6 +217,53 @@ def import_to_db():
     
     flash('Data import started! This may take a few minutes.', 'success')
     return redirect(url_for('main.index'))
+
+# import luôn từ cleaned.csv
+# def import_to_db():
+#     """Import cleaned data to database."""
+#     file_path = request.form.get('file_path')
+#     if not file_path:
+#         # Build đường dẫn đến cleaned.csv
+#         current_dir = os.getcwd()
+#         project_dir = current_dir if 'app' in os.listdir(current_dir) else os.path.dirname(current_dir)
+#         data_dir = os.path.join(project_dir, "data")
+#         preprocessing_dir = os.path.join(data_dir, "preprocessing")
+#         file_path = os.path.join(preprocessing_dir, "cleaned.csv")
+
+#         # Kiểm tra file cleaned.csv có tồn tại không
+#         if not os.path.exists(file_path):
+#             flash('No cleaned.csv found. Please run preprocessing first.', 'error')
+#             return redirect(url_for('main.index'))
+
+#     # Get a reference to the app for the background thread
+#     app = current_app._get_current_object()
+    
+#     # Run import in a background thread
+#     def import_with_monitor():
+#         with app.app_context():
+#             try:
+#                 start_time = datetime.now()
+#                 app.logger.info(f"Starting import from {file_path} at {start_time}")
+                
+#                 success = import_data_to_db(file_path)
+                
+#                 end_time = datetime.now()
+#                 duration = (end_time - start_time).total_seconds()
+                
+#                 if success:
+#                     app.logger.info(f"Successfully imported data from {file_path} in {duration:.2f} seconds")
+#                 else:
+#                     app.logger.error(f"Failed to import data from {file_path} after {duration:.2f} seconds")
+                    
+#             except Exception as e:
+#                 app.logger.error(f"Error importing data: {str(e)}")
+    
+#     import_thread = threading.Thread(target=import_with_monitor)
+#     import_thread.daemon = True
+#     import_thread.start()
+    
+#     flash('Data import from cleaned.csv started! This may take a few minutes.', 'success')
+#     return redirect(url_for('main.index'))
 
 @main_bp.route('/logs')
 def logs():
@@ -630,8 +678,14 @@ def train_models():
         # Ghi đè cleaned.csv bằng processed mới nhất
         shutil.copy2(latest_processed_file, cleaned_file)
         current_app.logger.info(f"Đã cập nhật cleaned.csv từ {latest_processed_file}")
-
-        # Khởi động huấn luyện nền
+        
+        # dòng 82-86
+        # cleaned_file = os.path.join(preprocessing_dir, "cleaned.csv")
+        # if not os.path.exists(cleaned_file):
+        #     flash('Không tìm thấy cleaned.csv. Vui lòng chạy bước preprocessing trước.', 'error')
+        #     return redirect(url_for('main.index'))
+        
+        # # Khởi động huấn luyện nền
         app = current_app._get_current_object()
 
         def run_training():

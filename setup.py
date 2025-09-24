@@ -7,6 +7,9 @@
 #     - URL của chợ tốt 
 #     - Sửa lại element cho hop ly trong crawler
 
+# preprocessor.py: dòng 32-61
+# routes.py: dòng 222 - 266 và dòng 682 - 686
+
 # cài python bản 3.13.3
 # cài đủ thư viện: pip install -r requirements.txt
 
